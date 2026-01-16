@@ -1,1 +1,14 @@
-1
+[
+  {
+    "id": "BS-01",
+    "nama": "Contoh Proker 1",
+    "kategori": "UMKM",
+    "status": "planned",
+    "ringkas": "Deskripsi singkat program kerja.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "Nama Mahasiswa 1",
+    "tanggal": "2026-01-20",
+    "output": [],
+    "kataKunci": ["umkm"]
+  }
+]
