@@ -60,17 +60,47 @@ async function initHome() {
   const d = $("#desa"); if (d) d.textContent = site.desa || "-";
   const p = $("#periode"); if (p) p.textContent = site.periode || "-";
 
-  const wrap = $("#highlights");
-  if (wrap) {
-    wrap.innerHTML = (site.heroHighlights || []).map(h => `
-      <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
-        <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
-        <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
-      </div>
-    `).join("");
-  }
+  const btnForm = $("#btnForm");
+  if (btnForm && site.ctaFormLaporan) btnForm.href = site.ctaFormLaporan;
 
+  // Highlights (gabungan: statis dari site.json + dinamis dari proker.json)
+  const wrap = $("#highlights");
   const proker = await loadJSON("data/proker.json");
+
+  const total = proker.length;
+  const planned = proker.filter(x => x.status === "planned").length;
+  const ongoing = proker.filter(x => x.status === "ongoing").length;
+  const done = proker.filter(x => x.status === "done").length;
+
+  const staticH = (site.heroHighlights || []).map(h => `
+    <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+      <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
+      <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
+    </div>
+  `).join("");
+
+  const dynamicH = `
+    <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+      <div class="text-2xl font-bold text-slate-900">${total}</div>
+      <div class="mt-1 text-sm text-slate-600">Total Proker</div>
+    </div>
+    <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+      <div class="text-2xl font-bold text-slate-900">${planned}</div>
+      <div class="mt-1 text-sm text-slate-600">Planned</div>
+    </div>
+    <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+      <div class="text-2xl font-bold text-slate-900">${ongoing}</div>
+      <div class="mt-1 text-sm text-slate-600">Ongoing</div>
+    </div>
+    <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+      <div class="text-2xl font-bold text-slate-900">${done}</div>
+      <div class="mt-1 text-sm text-slate-600">Done</div>
+    </div>
+  `;
+
+  if (wrap) wrap.innerHTML = staticH + dynamicH;
+
+  // Proker highlight (3 terbaru)
   const latest = [...proker]
     .sort((a, b) => (b.tanggal || "").localeCompare(a.tanggal || ""))
     .slice(0, 3);
