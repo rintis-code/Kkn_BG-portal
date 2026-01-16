@@ -1,1 +1,13 @@
-1
+{
+  "siteName": "KKN UNS 2026 — Banjarsari",
+  "tagline": "Portal program: progres jelas, output terdokumentasi.",
+  "desa": "Desa/Kelurahan Banjarsari",
+  "periode": "Januari–Februari 2026",
+  "ctaFormLaporan": "https://forms.gle/ISI_LINK_FORM_BANJARSARI",
+  "ctaDrive": "https://drive.google.com/ISI_LINK_FOLDER_BANJARSARI",
+  "heroHighlights": [
+    { "label": "Program Kerja", "value": "20+" },
+    { "label": "Dokumentasi", "value": "Foto/Video" },
+    { "label": "Output", "value": "Dokumen" }
+  ]
+}
