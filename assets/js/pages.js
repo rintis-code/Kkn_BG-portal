@@ -1,1 +1,223 @@
-1
+// assets/js/pages.js
+// Inisialisasi per halaman desa:
+// - File HTML desa memanggil JSON dengan path: "data/site.json", dll.
+// - Script dipanggil dari halaman desa: ../assets/js/pages.js
+
+async function initNavbar(active) {
+  const site = await loadJSON("data/site.json");
+
+  const elBrand = $("#brand");
+  if (elBrand) elBrand.textContent = site.siteName || "KKN Portal";
+
+  const btn = $("#btnLaporan");
+  if (btn && site.ctaFormLaporan) btn.href = site.ctaFormLaporan;
+
+  const btnDrive = $("#btnDrive");
+  if (btnDrive && site.ctaDrive) btnDrive.href = site.ctaDrive;
+
+  // Active nav
+  $$("[data-nav]").forEach(a => {
+    const key = a.getAttribute("data-nav");
+    if (key === active) {
+      a.classList.add("text-slate-900");
+      a.classList.remove("text-slate-600");
+    } else {
+      a.classList.add("text-slate-600");
+      a.classList.remove("text-slate-900");
+    }
+  });
+}
+
+function prokerCardMini(p) {
+  const outputs = (p.output || []).slice(0, 2).map(o =>
+    `<a class="text-sm font-medium text-slate-700 hover:text-slate-900 underline underline-offset-4"
+        href="${o.link}" target="_blank" rel="noopener">${safeText(o.label)}</a>`
+  ).join(" · ");
+
+  return `
+    <article class="group rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200 hover:shadow-md transition">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <div class="text-xs font-semibold text-slate-500">${safeText(p.id)} · ${safeText(p.kategori || "-")}</div>
+          <h3 class="mt-1 text-lg font-bold text-slate-900">${safeText(p.nama)}</h3>
+        </div>
+        <div>${badgeStatus(p.status)}</div>
+      </div>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">${safeText(p.ringkas)}</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-600">
+        <span class="rounded-full bg-slate-100 px-3 py-1">PIC: ${safeText(p.pic || "-")}</span>
+        <span class="rounded-full bg-slate-100 px-3 py-1">Tanggal: ${fmtDate(p.tanggal)}</span>
+      </div>
+      ${outputs ? `<div class="mt-4 text-sm text-slate-600">${outputs}</div>` : ``}
+    </article>
+  `;
+}
+
+async function initHome() {
+  const site = await loadJSON("data/site.json");
+
+  const t = $("#tagline"); if (t) t.textContent = site.tagline || "-";
+  const d = $("#desa"); if (d) d.textContent = site.desa || "-";
+  const p = $("#periode"); if (p) p.textContent = site.periode || "-";
+
+  const wrap = $("#highlights");
+  if (wrap) {
+    wrap.innerHTML = (site.heroHighlights || []).map(h => `
+      <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+        <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
+        <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
+      </div>
+    `).join("");
+  }
+
+  const proker = await loadJSON("data/proker.json");
+  const latest = [...proker]
+    .sort((a, b) => (b.tanggal || "").localeCompare(a.tanggal || ""))
+    .slice(0, 3);
+
+  const prev = $("#prokerPreview");
+  if (prev) prev.innerHTML = latest.map(x => prokerCardMini(x)).join("");
+}
+
+async function initTim() {
+  const tim = await loadJSON("data/tim.json");
+  const wrap = $("#timList");
+  if (!wrap) return;
+
+  wrap.innerHTML = tim.map(t => `
+    <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+      <div class="text-lg font-bold text-slate-900">${safeText(t.nama)}</div>
+      <div class="mt-1 text-sm text-slate-600">${safeText(t.peran)} · ${safeText(t.prodi)}</div>
+      <div class="mt-3 grid grid-cols-2 gap-2 text-sm text-slate-700">
+        <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-100">
+          <div class="text-xs text-slate-500">NIM</div><div class="font-semibold">${safeText(t.nim)}</div>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-100">
+          <div class="text-xs text-slate-500">Kontak</div><div class="font-semibold">${safeText(t.kontak || "-")}</div>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+async function initProker() {
+  const data = await loadJSON("data/proker.json");
+
+  // Isi dropdown kategori
+  const categories = Array.from(new Set(data.map(d => d.kategori).filter(Boolean))).sort();
+  const fKat = $("#filterKategori");
+  if (fKat) {
+    fKat.innerHTML =
+      `<option value="">Semua kategori</option>` +
+      categories.map(c => `<option value="${safeText(c)}">${safeText(c)}</option>`).join("");
+  }
+
+  function prokerCardDetail(p) {
+    const kpi = (p.kpi || []).map(x => `<li class="text-sm text-slate-700">${safeText(x)}</li>`).join("");
+    const outputs = (p.output || []).map(o => `
+      <a class="inline-flex items-center gap-2 rounded-xl bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 hover:bg-white"
+         href="${o.link}" target="_blank" rel="noopener">
+        <span class="h-2 w-2 rounded-full bg-slate-400"></span>${safeText(o.label)}
+      </a>
+    `).join("");
+
+    return `
+      <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <div class="text-xs font-semibold text-slate-500">${safeText(p.id)} · ${safeText(p.kategori || "-")}</div>
+            <h3 class="mt-1 text-xl font-extrabold text-slate-900">${safeText(p.nama)}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">${safeText(p.ringkas)}</p>
+          </div>
+          <div class="flex items-center gap-3">
+            ${badgeStatus(p.status)}
+            <div class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">${fmtDate(p.tanggal)}</div>
+          </div>
+        </div>
+
+        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-100">
+            <div class="text-xs font-semibold text-slate-500">PIC</div>
+            <div class="mt-1 font-bold text-slate-900">${safeText(p.pic || "-")}</div>
+          </div>
+          <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-100 md:col-span-2">
+            <div class="text-xs font-semibold text-slate-500">KPI</div>
+            <ul class="mt-2 list-disc pl-5 space-y-1">${kpi || `<li class="text-sm text-slate-700">-</li>`}</ul>
+          </div>
+        </div>
+
+        ${outputs ? `<div class="mt-5 flex flex-wrap gap-2">${outputs}</div>` : ``}
+      </article>
+    `;
+  }
+
+  function render() {
+    const q = ($("#searchProker")?.value || "").toLowerCase().trim();
+    const cat = $("#filterKategori")?.value || "";
+    const st = $("#filterStatus")?.value || "";
+
+    const filtered = data.filter(p => {
+      const hay = `${p.id} ${p.nama} ${p.kategori} ${(p.kataKunci||[]).join(" ")} ${p.pic}`.toLowerCase();
+      const okQ = !q || hay.includes(q);
+      const okCat = !cat || p.kategori === cat;
+      const okSt = !st || p.status === st;
+      return okQ && okCat && okSt;
+    }).sort((a, b) => (a.tanggal || "").localeCompare(b.tanggal || ""));
+
+    const cnt = $("#prokerCount");
+    if (cnt) cnt.textContent = `${filtered.length} program`;
+
+    const list = $("#prokerList");
+    if (list) list.innerHTML = filtered.map(p => prokerCardDetail(p)).join("");
+  }
+
+  $("#searchProker")?.addEventListener("input", render);
+  $("#filterKategori")?.addEventListener("change", render);
+  $("#filterStatus")?.addEventListener("change", render);
+  render();
+}
+
+async function initDokumentasi() {
+  const docs = await loadJSON("data/dokumentasi.json");
+  const grid = $("#docGrid");
+  if (!grid) return;
+
+  grid.innerHTML = docs.map(d => `
+    <a class="group block overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-md transition"
+       href="${d.link}" target="_blank" rel="noopener">
+      <div class="aspect-[16/10] bg-slate-100">
+        ${d.thumb
+          ? `<img src="${d.thumb}" alt="${safeText(d.judul)}" class="h-full w-full object-cover group-hover:scale-[1.02] transition">`
+          : `<div class="flex h-full items-center justify-center text-sm text-slate-500">No image</div>`}
+      </div>
+      <div class="p-4">
+        <div class="text-sm font-bold text-slate-900">${safeText(d.judul)}</div>
+        <div class="mt-1 text-xs text-slate-600">${fmtDate(d.tanggal)} · ${safeText(d.tipe)}</div>
+      </div>
+    </a>
+  `).join("");
+}
+
+async function initOutput() {
+  const proker = await loadJSON("data/proker.json");
+  const all = [];
+  proker.forEach(p => (p.output || []).forEach(o => all.push({ proker: p.nama, id: p.id, ...o })));
+
+  const wrap = $("#outputList");
+  if (!wrap) return;
+
+  const dataset = all.length
+    ? all
+    : [{ label: "Belum ada output", link: "#", id: "-", proker: "-" }];
+
+  wrap.innerHTML = dataset.map(o => `
+    <a class="flex items-center justify-between rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200 hover:shadow-md transition"
+       href="${o.link}" target="_blank" rel="noopener">
+      <div>
+        <div class="text-xs font-semibold text-slate-500">${safeText(o.id)} · ${safeText(o.proker)}</div>
+        <div class="mt-1 text-lg font-bold text-slate-900">${safeText(o.label)}</div>
+      </div>
+      <div class="text-sm font-semibold text-slate-700 underline underline-offset-4">Buka</div>
+    </a>
+  `).join("");
+}
