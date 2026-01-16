@@ -1,12 +1,12 @@
 {
-  "siteName": "KKN UNS 2026 — Banjarsari",
+  "siteName": "KKN UNS 2026 — Giripurno",
   "tagline": "Portal program: progres jelas, output terdokumentasi.",
-  "desa": "Desa/Kelurahan Banjarsari",
+  "desa": "Desa Giripurno",
   "periode": "Januari–Februari 2026",
-  "ctaFormLaporan": "https://forms.gle/ISI_LINK_FORM_BANJARSARI",
-  "ctaDrive": "https://drive.google.com/ISI_LINK_FOLDER_BANJARSARI",
+  "ctaFormLaporan": "https://forms.gle/ISI_LINK_FORM_GIRIPURNO",
+  "ctaDrive": "https://drive.google.com/ISI_LINK_FOLDER_GIRIPURNO",
   "heroHighlights": [
-    { "label": "Program Kerja", "value": "20+" },
+    { "label": "Program Kerja", "value": "10+" },
     { "label": "Dokumentasi", "value": "Foto/Video" },
     { "label": "Output", "value": "Dokumen" }
   ]
