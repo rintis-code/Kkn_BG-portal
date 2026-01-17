@@ -142,6 +142,37 @@ async function initProker() {
       categories.map(c => `<option value="${safeText(c)}">${safeText(c)}</option>`).join("");
   }
 
+// Tabs kategori (kekinian)
+  const tabsWrap = $("#kategoriTabs");
+  let activeCat = "";
+
+  function renderTabs() {
+    if (!tabsWrap) return;
+
+    const makeBtn = (label, value, isActive) => `
+      <button type="button"
+        class="rounded-full px-4 py-2 text-sm font-bold ring-1 transition
+          ${isActive ? "bg-slate-900 text-white ring-slate-900" : "bg-white text-slate-800 ring-slate-200 hover:shadow"}"
+        data-cat="${safeText(value)}">
+        ${safeText(label)}
+      </button>
+    `;
+
+    tabsWrap.innerHTML =
+      makeBtn("Semua", "", activeCat === "") +
+      categories.map(c => makeBtn(c, c, activeCat === c)).join("");
+
+    $$("button[data-cat]", tabsWrap).forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeCat = btn.getAttribute("data-cat") || "";
+        const fKat = $("#filterKategori");
+        if (fKat) fKat.value = activeCat; // sinkron dropdown
+        renderTabs();
+        render();
+      });
+    });
+  }
+
   function prokerCardDetail(p) {
     const kpi = (p.kpi || []).map(x => `<li class="text-sm text-slate-700">${safeText(x)}</li>`).join("");
     const outputs = (p.output || []).map(o => `
