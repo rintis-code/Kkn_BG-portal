@@ -1,14 +1,122 @@
 [
   {
     "id": "GP-01",
-    "nama": "Contoh Proker Giripurno",
+    "nama": "Proker 1",
     "kategori": "Pendidikan",
     "status": "planned",
-    "ringkas": "Deskripsi singkat program kerja Giripurno.",
+    "ringkas": "Ringkasan singkat proker 1.",
     "kpi": ["KPI 1", "KPI 2"],
-    "pic": "Nama Mahasiswa 1",
-    "tanggal": "2026-01-20",
+    "pic": "PIC 1",
+    "tanggal": "2026-01-10",
     "output": [],
-    "kataKunci": ["edukasi"]
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-02",
+    "nama": "Proker 2",
+    "kategori": "UMKM",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 2.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 2",
+    "tanggal": "2026-01-11",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-03",
+    "nama": "Proker 3",
+    "kategori": "Lingkungan",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 3.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 3",
+    "tanggal": "2026-01-12",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-04",
+    "nama": "Proker 4",
+    "kategori": "Pendidikan",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 4.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 4",
+    "tanggal": "2026-01-13",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-05",
+    "nama": "Proker 5",
+    "kategori": "Sosial",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 5.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 5",
+    "tanggal": "2026-01-14",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-06",
+    "nama": "Proker 6",
+    "kategori": "Kesehatan",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 6.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 6",
+    "tanggal": "2026-01-15",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-07",
+    "nama": "Proker 7",
+    "kategori": "Infrastruktur",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 7.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 7",
+    "tanggal": "2026-01-16",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-08",
+    "nama": "Proker 8",
+    "kategori": "UMKM",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 8.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 8",
+    "tanggal": "2026-01-17",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-09",
+    "nama": "Proker 9",
+    "kategori": "Lingkungan",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 9.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 9",
+    "tanggal": "2026-01-18",
+    "output": [],
+    "kataKunci": ["giripurno"]
+  },
+  {
+    "id": "GP-10",
+    "nama": "Proker 10",
+    "kategori": "Administrasi",
+    "status": "planned",
+    "ringkas": "Ringkasan singkat proker 10.",
+    "kpi": ["KPI 1", "KPI 2"],
+    "pic": "PIC 10",
+    "tanggal": "2026-01-19",
+    "output": [],
+    "kataKunci": ["giripurno"]
   }
 ]
