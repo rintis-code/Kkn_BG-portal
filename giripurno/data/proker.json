@@ -4,7 +4,7 @@
     "nama": "Lilin aromaterapi dari minyak jelantah",
     "kategori": "UMKM",
     "status": "planned",
-    "ringkas": "Pengolahan minyak jelantah menjadi lilin aromaterapi sebagai pendekatan waste-to-product untuk mengurangi limbah dan meningkatkan nilai ekonomi.",
+    "ringkas": "Pengolahan minyak jelantah menjadi lilin aromaterapi sebagai waste-to-product untuk mengurangi limbah sekaligus menambah nilai ekonomi.",
     "kpi": [
       "Liter jelantah terkumpul",
       "Jumlah lilin jadi",
@@ -16,14 +16,15 @@
     "output": [],
     "kataKunci": ["minyak jelantah", "lilin", "waste-to-product", "umkm"],
     "sdgUtama": "SDG 12",
-    "sdgPendukung": ["SDG 8", "SDG 11"]
+    "sdgPendukung": ["SDG 8", "SDG 11"],
+    "jenisDampak": "Langsung"
   },
   {
     "id": "152-2",
     "nama": "Pupuk POC & pestisida nabati",
     "kategori": "Pertanian",
     "status": "planned",
-    "ringkas": "Pelatihan pertanian berkelanjutan melalui produksi pupuk organik cair (POC) dan pestisida nabati untuk mendukung produktivitas dan praktik ramah lingkungan.",
+    "ringkas": "Pelatihan pertanian berkelanjutan melalui produksi POC dan pestisida nabati untuk produktivitas sekaligus praktik ramah lingkungan.",
     "kpi": [
       "Volume POC (L)",
       "Volume pestisida (L)",
@@ -35,14 +36,15 @@
     "output": [],
     "kataKunci": ["poc", "pestisida nabati", "pertanian organik", "fermentasi"],
     "sdgUtama": "SDG 2",
-    "sdgPendukung": ["SDG 12", "SDG 15", "SDG 13"]
+    "sdgPendukung": ["SDG 12", "SDG 15", "SDG 13"],
+    "jenisDampak": "Langsung"
   },
   {
     "id": "152-3",
     "nama": "Edukasi & pembuatan pestisida nabati",
     "kategori": "Pertanian",
     "status": "planned",
-    "ringkas": "Edukasi dan praktik pembuatan pestisida nabati untuk pengendalian hama yang aman dan ramah lingkungan dengan SOP dosis dan monitoring aplikasi.",
+    "ringkas": "Edukasi dan praktik pembuatan pestisida nabati untuk pengendalian hama ramah lingkungan dengan SOP dosis dan monitoring aplikasi.",
     "kpi": [
       "Jumlah peserta",
       "Volume pestisida (L)",
@@ -54,14 +56,15 @@
     "output": [],
     "kataKunci": ["pestisida nabati", "pengendalian hama", "sop dosis", "ramah lingkungan"],
     "sdgUtama": "SDG 2",
-    "sdgPendukung": ["SDG 12", "SDG 15"]
+    "sdgPendukung": ["SDG 12", "SDG 15"],
+    "jenisDampak": "Langsung"
   },
   {
     "id": "152-4",
     "nama": "Jamu kunyit asam bubuk instan (sangrai)",
     "kategori": "UMKM",
     "status": "planned",
-    "ringkas": "Inovasi produk jamu instan kunyit asam (sangrai) untuk penguatan UMKM melalui standardisasi proses, kemasan, label, dan rencana pemasaran.",
+    "ringkas": "Inovasi produk jamu instan kunyit asam melalui standardisasi proses, kemasan, label, dan rencana pemasaran untuk penguatan UMKM.",
     "kpi": [
       "Jumlah peserta",
       "Jumlah sachet diproduksi",
@@ -73,14 +76,15 @@
     "output": [],
     "kataKunci": ["jamu instan", "kunyit asam", "kemasan", "label", "pemasaran"],
     "sdgUtama": "SDG 8",
-    "sdgPendukung": ["SDG 3", "SDG 9"]
+    "sdgPendukung": ["SDG 3", "SDG 9"],
+    "jenisDampak": "Langsung"
   },
   {
     "id": "152-5",
     "nama": "Edukasi pangan B2SA",
     "kategori": "Kesehatan",
     "status": "planned",
-    "ringkas": "Edukasi gizi seimbang keluarga melalui konsep B2SA, didukung pre-post test dan leaflet/menu untuk mendorong praktik pangan sehat di rumah tangga.",
+    "ringkas": "Edukasi gizi seimbang keluarga melalui konsep B2SA dengan dukungan pre-post test dan leaflet/menu untuk praktik pangan sehat.",
     "kpi": [
       "Jumlah peserta",
       "Hasil pre-post test",
@@ -92,7 +96,8 @@
     "output": [],
     "kataKunci": ["b2sa", "gizi seimbang", "nutrisi", "keluarga"],
     "sdgUtama": "SDG 2",
-    "sdgPendukung": ["SDG 3", "SDG 4"]
+    "sdgPendukung": ["SDG 3", "SDG 4"],
+    "jenisDampak": "Langsung"
   },
   {
     "id": "152-6",
@@ -103,3 +108,76 @@
     "kpi": [
       "Jumlah alat dibuat/diuji",
       "Perbandingan waktu tabur manual vs alat",
+      "Jumlah tray/bedeng tertabur"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-15",
+    "output": [],
+    "kataKunci": ["ttg", "alat penabur", "hortikultura", "efisiensi"],
+    "sdgUtama": "SDG 2",
+    "sdgPendukung": ["SDG 9", "SDG 8"],
+    "jenisDampak": "Langsung"
+  },
+  {
+    "id": "152-7",
+    "nama": "Digitalisasi marketing: UMKM di Google Maps",
+    "kategori": "UMKM",
+    "status": "planned",
+    "ringkas": "Pendampingan digital marketing UMKM melalui pendaftaran dan optimalisasi profil usaha di Google Maps untuk meningkatkan visibilitas dan akses pasar.",
+    "kpi": [
+      "Jumlah UMKM terdaftar",
+      "Jumlah link terbit",
+      "Status verifikasi",
+      "Foto dan deskripsi terunggah"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-16",
+    "output": [],
+    "kataKunci": ["umkm", "google maps", "digital marketing", "visibilitas"],
+    "sdgUtama": "SDG 8",
+    "sdgPendukung": ["SDG 9", "SDG 4"],
+    "jenisDampak": "Langsung"
+  },
+  {
+    "id": "152-8",
+    "nama": "Sosialisasi Penanaman Pohon Kopi dan Alpukat",
+    "kategori": "Lingkungan",
+    "status": "planned",
+    "ringkas": "Program agroforestry melalui sosialisasi dan praktik penanaman kopi–alpukat untuk penghijauan, konservasi lahan, dan potensi ekonomi jangka panjang.",
+    "kpi": [
+      "Jumlah bibit dibagikan",
+      "Jumlah bibit tertanam",
+      "Jumlah KK/kelompok tani terlibat",
+      "Jumlah titik tanam",
+      "Survival rate 2–4 minggu (estimasi)"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-17",
+    "output": [],
+    "kataKunci": ["agroforestry", "kopi", "alpukat", "penghijauan", "konservasi lahan"],
+    "sdgUtama": "SDG 15",
+    "sdgPendukung": ["SDG 2", "SDG 13", "SDG 8"],
+    "jenisDampak": "Langsung"
+  },
+  {
+    "id": "152-9",
+    "nama": "Sosialisasi Pemanfaatan Tanaman Katuk untuk Ibu Menyusui",
+    "kategori": "Kesehatan",
+    "status": "planned",
+    "ringkas": "Edukasi dan pembagian bibit katuk sebagai pangan lokal fungsional untuk mendukung ASI eksklusif, gizi ibu menyusui, dan kesehatan ibu-bayi.",
+    "kpi": [
+      "Jumlah peserta ibu menyusui/ibu hamil",
+      "Jumlah bibit dibagikan",
+      "Jumlah rumah menanam katuk",
+      "Pre-post test pengetahuan (opsional)",
+      "Jumlah leaflet tersedia"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-18",
+    "output": [],
+    "kataKunci": ["katuk", "asi eksklusif", "gizi", "pangan lokal", "ibu menyusui"],
+    "sdgUtama": "SDG 3",
+    "sdgPendukung": ["SDG 2", "SDG 4", "SDG 5"],
+    "jenisDampak": "Langsung"
+  }
+]
