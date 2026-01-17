@@ -1,14 +1,249 @@
 [
   {
-    "id": "BS-01",
-    "nama": "Contoh Proker 1",
+    "id": "151-1",
+    "nama": "Bibit tanaman dibagikan + panduan tanam/perawatan",
+    "kategori": "Ketahanan Pangan",
+    "status": "planned",
+    "ringkas": "Program pekarangan pangan lestari untuk memperkuat ketahanan pangan rumah tangga melalui distribusi bibit dan panduan budidaya.",
+    "kpi": [
+      "Jumlah bibit dibagikan",
+      "Jumlah KK penerima",
+      "Panduan tercetak tersedia",
+      "Persentase bibit tertanam"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-10",
+    "output": [],
+    "kataKunci": ["bibit", "p2l", "ketahanan pangan", "pekarangan"],
+    "sdgUtama": "SDG 2",
+    "sdgPendukung": ["SDG 13", "SDG 15"]
+  },
+  {
+    "id": "151-2",
+    "nama": "Cek kesehatan gratis",
+    "kategori": "Kesehatan",
+    "status": "planned",
+    "ringkas": "Layanan pemeriksaan kesehatan preventif untuk warga, mendorong kesetaraan akses layanan dan deteksi risiko dini.",
+    "kpi": [
+      "Jumlah warga diperiksa",
+      "Jenis pemeriksaan tersedia",
+      "Rekap hasil pemeriksaan",
+      "Jumlah rujukan/temuan risiko"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-11",
+    "output": [],
+    "kataKunci": ["cek kesehatan", "preventif", "promotif", "akses layanan"],
+    "sdgUtama": "SDG 3",
+    "sdgPendukung": ["SDG 10"]
+  },
+  {
+    "id": "151-3",
+    "nama": "Demo PMT pencegahan stunting",
+    "kategori": "Kesehatan",
+    "status": "planned",
+    "ringkas": "Edukasi nutrisi melalui demo PMT untuk pencegahan stunting dan peningkatan gizi balita serta ibu.",
+    "kpi": [
+      "Jumlah balita/ibu sasaran",
+      "Jumlah demo menu PMT",
+      "Leaflet resep tersedia",
+      "Daftar hadir kegiatan"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-12",
+    "output": [],
+    "kataKunci": ["pmt", "stunting", "nutrisi", "gizi"],
+    "sdgUtama": "SDG 2",
+    "sdgPendukung": ["SDG 3"]
+  },
+  {
+    "id": "151-4",
+    "nama": "Gerakan Sehat Ibu dan Anak",
+    "kategori": "Kesehatan",
+    "status": "planned",
+    "ringkas": "Gerakan promotif kesehatan ibu-anak yang dikaitkan dengan kegiatan posyandu dan layanan KIA.",
+    "kpi": [
+      "Jumlah peserta",
+      "Materi edukasi tersedia",
+      "Komitmen perilaku sehat",
+      "Dokumentasi kegiatan"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-13",
+    "output": [],
+    "kataKunci": ["kesehatan ibu", "kesehatan anak", "posyandu", "kia"],
+    "sdgUtama": "SDG 3",
+    "sdgPendukung": ["SDG 5"]
+  },
+  {
+    "id": "151-5",
+    "nama": "Pembuatan biopori",
+    "kategori": "Lingkungan",
+    "status": "planned",
+    "ringkas": "Intervensi lingkungan permukiman melalui pembuatan biopori untuk konservasi air dan pengurangan potensi genangan.",
+    "kpi": [
+      "Jumlah lubang biopori",
+      "Lokasi titik biopori",
+      "Jumlah warga dilatih",
+      "Panduan biopori tersedia"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-14",
+    "output": [],
+    "kataKunci": ["biopori", "air", "genangan", "permukiman"],
+    "sdgUtama": "SDG 11",
+    "sdgPendukung": ["SDG 6", "SDG 13"]
+  },
+  {
+    "id": "151-6",
+    "nama": "Pemilahan sampah",
+    "kategori": "Lingkungan",
+    "status": "planned",
+    "ringkas": "Sosialisasi dan penerapan pemilahan sampah rumah tangga untuk mendorong konsumsi-produksi bertanggung jawab dan pengurangan emisi.",
+    "kpi": [
+      "Jumlah rumah ikut pemilahan",
+      "Media sosialisasi tersedia",
+      "SOP pemilahan tersedia",
+      "Estimasi pengurangan volume sampah"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-15",
+    "output": [],
+    "kataKunci": ["pilah sampah", "bank sampah", "3r", "sop"],
+    "sdgUtama": "SDG 12",
+    "sdgPendukung": ["SDG 11", "SDG 13"]
+  },
+  {
+    "id": "151-7",
+    "nama": "Podcast hukum lingkungan",
+    "kategori": "Pendidikan",
+    "status": "planned",
+    "ringkas": "Produksi podcast edukatif untuk meningkatkan literasi hukum lingkungan dan kesadaran publik terkait praktik berkelanjutan.",
+    "kpi": [
+      "Jumlah episode",
+      "Durasi episode",
+      "Jumlah viewer/listener",
+      "Outline materi tersedia"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-16",
+    "output": [],
+    "kataKunci": ["podcast", "hukum lingkungan", "literasi", "edukasi publik"],
+    "sdgUtama": "SDG 4",
+    "sdgPendukung": ["SDG 12", "SDG 16"]
+  },
+  {
+    "id": "151-8",
+    "nama": "Pelatihan Excel/Spreadsheet & GDrive untuk audit desa",
+    "kategori": "Tata Kelola",
+    "status": "planned",
+    "ringkas": "Pelatihan penguatan kapasitas perangkat desa untuk transparansi dan pengelolaan arsip berbasis spreadsheet dan Google Drive.",
+    "kpi": [
+      "Jumlah peserta pelatihan",
+      "Template audit tersedia",
+      "Jumlah perangkat mampu input",
+      "Arsip Drive aktif"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-17",
+    "output": [],
+    "kataKunci": ["excel", "spreadsheet", "gdrive", "audit desa", "transparansi"],
+    "sdgUtama": "SDG 16",
+    "sdgPendukung": ["SDG 4"]
+  },
+  {
+    "id": "151-9",
+    "nama": "Sosialisasi Desa Sehat",
+    "kategori": "Kesehatan",
+    "status": "planned",
+    "ringkas": "Program umbrella PHBS untuk memperkuat kesehatan komunitas, sanitasi, dan kualitas lingkungan permukiman.",
+    "kpi": [
+      "Jumlah peserta",
+      "Pre-post test",
+      "Komitmen warga",
+      "Poster/leaflet tersedia"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-18",
+    "output": [],
+    "kataKunci": ["desa sehat", "phbs", "sanitasi", "kesehatan komunitas"],
+    "sdgUtama": "SDG 3",
+    "sdgPendukung": ["SDG 6", "SDG 11"]
+  },
+  {
+    "id": "151-10",
+    "nama": "Pelatihan merajut",
     "kategori": "UMKM",
     "status": "planned",
-    "ringkas": "Deskripsi singkat program kerja.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "Nama Mahasiswa 1",
+    "ringkas": "Pemberdayaan ekonomi kreatif melalui pelatihan merajut, berpotensi membentuk kelompok produktif/UMKM perempuan.",
+    "kpi": [
+      "Jumlah peserta",
+      "Jumlah produk dihasilkan",
+      "Modul dasar merajut",
+      "Identifikasi potensi kelompok UMKM"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-19",
+    "output": [],
+    "kataKunci": ["merajut", "ekonomi kreatif", "umkm", "pemberdayaan"],
+    "sdgUtama": "SDG 8",
+    "sdgPendukung": ["SDG 5"]
+  },
+  {
+    "id": "151-11",
+    "nama": "Kerajinan dari sampah anorganik",
+    "kategori": "UMKM",
+    "status": "planned",
+    "ringkas": "Pelatihan daur ulang sampah anorganik menjadi produk kerajinan bernilai ekonomi dengan pendekatan 3R.",
+    "kpi": [
+      "Jumlah peserta",
+      "Jumlah produk dihasilkan",
+      "Materi 3R tersedia",
+      "Display hasil kerajinan"
+    ],
+    "pic": "TBD",
     "tanggal": "2026-01-20",
     "output": [],
-    "kataKunci": ["umkm"]
+    "kataKunci": ["kerajinan", "sampah anorganik", "daur ulang", "3r", "produk"],
+    "sdgUtama": "SDG 12",
+    "sdgPendukung": ["SDG 8", "SDG 11"]
+  },
+  {
+    "id": "151-12",
+    "nama": "Gebyar Ramadhan Desa",
+    "kategori": "Sosial",
+    "status": "planned",
+    "ringkas": "Kegiatan komunitas untuk memperkuat kohesi sosial, partisipasi warga, dan kolaborasi lintas pihak di tingkat desa.",
+    "kpi": [
+      "Jumlah kegiatan",
+      "Jumlah panitia",
+      "Jumlah peserta",
+      "Dokumentasi acara"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-21",
+    "output": [],
+    "kataKunci": ["gebyar ramadhan", "komunitas", "kolaborasi", "partisipasi"],
+    "sdgUtama": "SDG 11",
+    "sdgPendukung": ["SDG 16", "SDG 17"]
+  },
+  {
+    "id": "151-13",
+    "nama": "Sosialisasi AutoCAD dan RAB",
+    "kategori": "Pendidikan",
+    "status": "planned",
+    "ringkas": "Pelatihan kapasitas teknis berbasis vokasi terkait AutoCAD dan penyusunan RAB sebagai peningkatan skill infrastruktur dasar.",
+    "kpi": [
+      "Jumlah peserta",
+      "Modul CAD/RAB tersedia",
+      "Contoh desain/RAB",
+      "Nilai post-test"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-22",
+    "output": [],
+    "kataKunci": ["autocad", "rab", "vokasi", "skill teknis"],
+    "sdgUtama": "SDG 4",
+    "sdgPendukung": ["SDG 9", "SDG 11"]
   }
 ]
