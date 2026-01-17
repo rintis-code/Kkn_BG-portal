@@ -1,122 +1,105 @@
 [
   {
-    "id": "GP-01",
-    "nama": "Proker 1",
-    "kategori": "Pendidikan",
+    "id": "152-1",
+    "nama": "Lilin aromaterapi dari minyak jelantah",
+    "kategori": "UMKM",
     "status": "planned",
-    "ringkas": "Ringkasan singkat proker 1.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 1",
+    "ringkas": "Pengolahan minyak jelantah menjadi lilin aromaterapi sebagai pendekatan waste-to-product untuk mengurangi limbah dan meningkatkan nilai ekonomi.",
+    "kpi": [
+      "Liter jelantah terkumpul",
+      "Jumlah lilin jadi",
+      "Jumlah peserta",
+      "Label produk tersedia"
+    ],
+    "pic": "TBD",
     "tanggal": "2026-01-10",
     "output": [],
-    "kataKunci": ["giripurno"]
+    "kataKunci": ["minyak jelantah", "lilin", "waste-to-product", "umkm"],
+    "sdgUtama": "SDG 12",
+    "sdgPendukung": ["SDG 8", "SDG 11"]
   },
   {
-    "id": "GP-02",
-    "nama": "Proker 2",
-    "kategori": "UMKM",
+    "id": "152-2",
+    "nama": "Pupuk POC & pestisida nabati",
+    "kategori": "Pertanian",
     "status": "planned",
-    "ringkas": "Ringkasan singkat proker 2.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 2",
+    "ringkas": "Pelatihan pertanian berkelanjutan melalui produksi pupuk organik cair (POC) dan pestisida nabati untuk mendukung produktivitas dan praktik ramah lingkungan.",
+    "kpi": [
+      "Volume POC (L)",
+      "Volume pestisida (L)",
+      "Jumlah petani peserta",
+      "Monitoring proses fermentasi"
+    ],
+    "pic": "TBD",
     "tanggal": "2026-01-11",
     "output": [],
-    "kataKunci": ["giripurno"]
+    "kataKunci": ["poc", "pestisida nabati", "pertanian organik", "fermentasi"],
+    "sdgUtama": "SDG 2",
+    "sdgPendukung": ["SDG 12", "SDG 15", "SDG 13"]
   },
   {
-    "id": "GP-03",
-    "nama": "Proker 3",
-    "kategori": "Lingkungan",
+    "id": "152-3",
+    "nama": "Edukasi & pembuatan pestisida nabati",
+    "kategori": "Pertanian",
     "status": "planned",
-    "ringkas": "Ringkasan singkat proker 3.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 3",
+    "ringkas": "Edukasi dan praktik pembuatan pestisida nabati untuk pengendalian hama yang aman dan ramah lingkungan dengan SOP dosis dan monitoring aplikasi.",
+    "kpi": [
+      "Jumlah peserta",
+      "Volume pestisida (L)",
+      "Monitoring aplikasi",
+      "SOP dosis tersedia"
+    ],
+    "pic": "TBD",
     "tanggal": "2026-01-12",
     "output": [],
-    "kataKunci": ["giripurno"]
+    "kataKunci": ["pestisida nabati", "pengendalian hama", "sop dosis", "ramah lingkungan"],
+    "sdgUtama": "SDG 2",
+    "sdgPendukung": ["SDG 12", "SDG 15"]
   },
   {
-    "id": "GP-04",
-    "nama": "Proker 4",
-    "kategori": "Pendidikan",
-    "status": "planned",
-    "ringkas": "Ringkasan singkat proker 4.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 4",
-    "tanggal": "2026-01-13",
-    "output": [],
-    "kataKunci": ["giripurno"]
-  },
-  {
-    "id": "GP-05",
-    "nama": "Proker 5",
-    "kategori": "Sosial",
-    "status": "planned",
-    "ringkas": "Ringkasan singkat proker 5.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 5",
-    "tanggal": "2026-01-14",
-    "output": [],
-    "kataKunci": ["giripurno"]
-  },
-  {
-    "id": "GP-06",
-    "nama": "Proker 6",
-    "kategori": "Kesehatan",
-    "status": "planned",
-    "ringkas": "Ringkasan singkat proker 6.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 6",
-    "tanggal": "2026-01-15",
-    "output": [],
-    "kataKunci": ["giripurno"]
-  },
-  {
-    "id": "GP-07",
-    "nama": "Proker 7",
-    "kategori": "Infrastruktur",
-    "status": "planned",
-    "ringkas": "Ringkasan singkat proker 7.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 7",
-    "tanggal": "2026-01-16",
-    "output": [],
-    "kataKunci": ["giripurno"]
-  },
-  {
-    "id": "GP-08",
-    "nama": "Proker 8",
+    "id": "152-4",
+    "nama": "Jamu kunyit asam bubuk instan (sangrai)",
     "kategori": "UMKM",
     "status": "planned",
-    "ringkas": "Ringkasan singkat proker 8.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 8",
-    "tanggal": "2026-01-17",
+    "ringkas": "Inovasi produk jamu instan kunyit asam (sangrai) untuk penguatan UMKM melalui standardisasi proses, kemasan, label, dan rencana pemasaran.",
+    "kpi": [
+      "Jumlah peserta",
+      "Jumlah sachet diproduksi",
+      "Kemasan dan label tersedia",
+      "Rencana pemasaran disusun"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-13",
     "output": [],
-    "kataKunci": ["giripurno"]
+    "kataKunci": ["jamu instan", "kunyit asam", "kemasan", "label", "pemasaran"],
+    "sdgUtama": "SDG 8",
+    "sdgPendukung": ["SDG 3", "SDG 9"]
   },
   {
-    "id": "GP-09",
-    "nama": "Proker 9",
-    "kategori": "Lingkungan",
+    "id": "152-5",
+    "nama": "Edukasi pangan B2SA",
+    "kategori": "Kesehatan",
     "status": "planned",
-    "ringkas": "Ringkasan singkat proker 9.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 9",
-    "tanggal": "2026-01-18",
+    "ringkas": "Edukasi gizi seimbang keluarga melalui konsep B2SA, didukung pre-post test dan leaflet/menu untuk mendorong praktik pangan sehat di rumah tangga.",
+    "kpi": [
+      "Jumlah peserta",
+      "Hasil pre-post test",
+      "Komitmen keluarga",
+      "Leaflet/menu tersedia"
+    ],
+    "pic": "TBD",
+    "tanggal": "2026-01-14",
     "output": [],
-    "kataKunci": ["giripurno"]
+    "kataKunci": ["b2sa", "gizi seimbang", "nutrisi", "keluarga"],
+    "sdgUtama": "SDG 2",
+    "sdgPendukung": ["SDG 3", "SDG 4"]
   },
   {
-    "id": "GP-10",
-    "nama": "Proker 10",
-    "kategori": "Administrasi",
+    "id": "152-6",
+    "nama": "Alat penabur bibit sederhana hortikultura",
+    "kategori": "Teknologi Tepat Guna",
     "status": "planned",
-    "ringkas": "Ringkasan singkat proker 10.",
-    "kpi": ["KPI 1", "KPI 2"],
-    "pic": "PIC 10",
-    "tanggal": "2026-01-19",
-    "output": [],
-    "kataKunci": ["giripurno"]
-  }
-]
+    "ringkas": "Pengembangan TTG alat penabur bibit untuk efisiensi budidaya hortikultura melalui pembuatan, uji fungsi, dan perbandingan waktu tabur manual vs alat.",
+    "kpi": [
+      "Jumlah alat dibuat/diuji",
+      "Perbandingan waktu tabur manual vs alat",
