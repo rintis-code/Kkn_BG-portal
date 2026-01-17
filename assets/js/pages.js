@@ -233,10 +233,17 @@ async function initProker() {
   }
 
   $("#searchProker")?.addEventListener("input", render);
-  $("#filterKategori")?.addEventListener("change", render);
+
+  $("#filterKategori")?.addEventListener("change", () => {
+    activeCat = $("#filterKategori")?.value || "";
+    renderTabs();
+    render();
+  });
+
   $("#filterStatus")?.addEventListener("change", render);
+
+  renderTabs();
   render();
-}
 
 async function initDokumentasi() {
   const docs = await loadJSON("data/dokumentasi.json");
