@@ -5,6 +5,7 @@
     "kategori": "UMKM",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Pengolahan minyak jelantah menjadi lilin aromaterapi sebagai waste-to-product untuk mengurangi limbah sekaligus menambah nilai ekonomi.",
     "kpi": [
       "Liter jelantah terkumpul",
@@ -26,6 +27,7 @@
     "kategori": "Pertanian",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Pelatihan pertanian berkelanjutan melalui produksi POC dan pestisida nabati untuk produktivitas sekaligus praktik ramah lingkungan.",
     "kpi": [
       "Volume POC (L)",
@@ -47,6 +49,7 @@
     "kategori": "Pertanian",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Edukasi dan praktik pembuatan pestisida nabati untuk pengendalian hama ramah lingkungan dengan SOP dosis dan monitoring aplikasi.",
     "kpi": [
       "Jumlah peserta",
@@ -68,6 +71,7 @@
     "kategori": "UMKM",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Inovasi produk jamu instan kunyit asam melalui standardisasi proses, kemasan, label, dan rencana pemasaran untuk penguatan UMKM.",
     "kpi": [
       "Jumlah peserta",
@@ -89,6 +93,7 @@
     "kategori": "Kesehatan",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Edukasi gizi seimbang keluarga melalui konsep B2SA dengan dukungan pre-post test dan leaflet/menu untuk praktik pangan sehat.",
     "kpi": [
       "Jumlah peserta",
@@ -110,6 +115,7 @@
     "kategori": "Teknologi Tepat Guna",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Pengembangan TTG alat penabur bibit untuk efisiensi budidaya hortikultura melalui pembuatan, uji fungsi, dan perbandingan waktu tabur manual vs alat.",
     "kpi": [
       "Jumlah alat dibuat/diuji",
@@ -130,6 +136,7 @@
     "kategori": "UMKM",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Pendampingan digital marketing UMKM melalui pendaftaran dan optimalisasi profil usaha di Google Maps untuk meningkatkan visibilitas dan akses pasar.",
     "kpi": [
       "Jumlah UMKM terdaftar",
@@ -151,6 +158,7 @@
     "kategori": "Lingkungan",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Program agroforestry melalui sosialisasi dan praktik penanaman kopi–alpukat untuk penghijauan, konservasi lahan, dan potensi ekonomi jangka panjang.",
     "kpi": [
       "Jumlah bibit dibagikan",
@@ -173,6 +181,7 @@
     "kategori": "Kesehatan",
     "status": "planned",
 "progress": 0,
+"updatedAt": "2026-01-18",
     "ringkas": "Edukasi dan pembagian bibit katuk sebagai pangan lokal fungsional untuk mendukung ASI eksklusif, gizi ibu menyusui, dan kesehatan ibu-bayi.",
     "kpi": [
       "Jumlah peserta ibu menyusui/ibu hamil",
