@@ -96,13 +96,13 @@ function prokerCardMini(p) {
         ${outputs || `<span class="text-xs text-slate-500">Belum ada output.</span>`}
       </div>
 
-      <div class="mt-3 text-xs text-slate-500">
-        PIC: <span class="font-bold text-slate-700">${safeText(p.pic || "TBD")}</span>
-        <span class="mx-2">•</span>
-        Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
-      </div>
-    </div>
-  `;
+      <<div class="mt-3 text-xs text-slate-500">
+  PIC: <span class="font-bold text-slate-700">${safeText(p.pic || "TBD")}</span>
+  <span class="mx-2">•</span>
+  Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
+  <span class="mx-2">•</span>
+  Update: <span class="font-bold text-slate-700">${safeText(p.updatedAt || "-")}</span>
+</div>
 }
 
 async function initHome() {
