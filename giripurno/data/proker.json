@@ -4,6 +4,7 @@
     "nama": "Lilin aromaterapi dari minyak jelantah",
     "kategori": "UMKM",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pengolahan minyak jelantah menjadi lilin aromaterapi sebagai waste-to-product untuk mengurangi limbah sekaligus menambah nilai ekonomi.",
     "kpi": [
       "Liter jelantah terkumpul",
@@ -24,6 +25,7 @@
     "nama": "Pupuk POC & pestisida nabati",
     "kategori": "Pertanian",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pelatihan pertanian berkelanjutan melalui produksi POC dan pestisida nabati untuk produktivitas sekaligus praktik ramah lingkungan.",
     "kpi": [
       "Volume POC (L)",
@@ -44,6 +46,7 @@
     "nama": "Edukasi & pembuatan pestisida nabati",
     "kategori": "Pertanian",
     "status": "planned",
+"progress": 0,
     "ringkas": "Edukasi dan praktik pembuatan pestisida nabati untuk pengendalian hama ramah lingkungan dengan SOP dosis dan monitoring aplikasi.",
     "kpi": [
       "Jumlah peserta",
@@ -64,6 +67,7 @@
     "nama": "Jamu kunyit asam bubuk instan (sangrai)",
     "kategori": "UMKM",
     "status": "planned",
+"progress": 0,
     "ringkas": "Inovasi produk jamu instan kunyit asam melalui standardisasi proses, kemasan, label, dan rencana pemasaran untuk penguatan UMKM.",
     "kpi": [
       "Jumlah peserta",
@@ -84,6 +88,7 @@
     "nama": "Edukasi pangan B2SA",
     "kategori": "Kesehatan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Edukasi gizi seimbang keluarga melalui konsep B2SA dengan dukungan pre-post test dan leaflet/menu untuk praktik pangan sehat.",
     "kpi": [
       "Jumlah peserta",
@@ -104,6 +109,7 @@
     "nama": "Alat penabur bibit sederhana hortikultura",
     "kategori": "Teknologi Tepat Guna",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pengembangan TTG alat penabur bibit untuk efisiensi budidaya hortikultura melalui pembuatan, uji fungsi, dan perbandingan waktu tabur manual vs alat.",
     "kpi": [
       "Jumlah alat dibuat/diuji",
@@ -123,6 +129,7 @@
     "nama": "Digitalisasi marketing: UMKM di Google Maps",
     "kategori": "UMKM",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pendampingan digital marketing UMKM melalui pendaftaran dan optimalisasi profil usaha di Google Maps untuk meningkatkan visibilitas dan akses pasar.",
     "kpi": [
       "Jumlah UMKM terdaftar",
@@ -143,6 +150,7 @@
     "nama": "Sosialisasi Penanaman Pohon Kopi dan Alpukat",
     "kategori": "Lingkungan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Program agroforestry melalui sosialisasi dan praktik penanaman kopi–alpukat untuk penghijauan, konservasi lahan, dan potensi ekonomi jangka panjang.",
     "kpi": [
       "Jumlah bibit dibagikan",
@@ -164,6 +172,7 @@
     "nama": "Sosialisasi Pemanfaatan Tanaman Katuk untuk Ibu Menyusui",
     "kategori": "Kesehatan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Edukasi dan pembagian bibit katuk sebagai pangan lokal fungsional untuk mendukung ASI eksklusif, gizi ibu menyusui, dan kesehatan ibu-bayi.",
     "kpi": [
       "Jumlah peserta ibu menyusui/ibu hamil",
