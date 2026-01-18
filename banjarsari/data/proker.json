@@ -4,6 +4,7 @@
     "nama": "Bibit tanaman dibagikan + panduan tanam/perawatan",
     "kategori": "Ketahanan Pangan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Program pekarangan pangan lestari untuk memperkuat ketahanan pangan rumah tangga melalui distribusi bibit dan panduan budidaya.",
     "kpi": [
       "Jumlah bibit dibagikan",
@@ -23,6 +24,7 @@
     "nama": "Cek kesehatan gratis",
     "kategori": "Kesehatan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Layanan pemeriksaan kesehatan preventif untuk warga, mendorong kesetaraan akses layanan dan deteksi risiko dini.",
     "kpi": [
       "Jumlah warga diperiksa",
@@ -42,6 +44,7 @@
     "nama": "Demo PMT pencegahan stunting",
     "kategori": "Kesehatan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Edukasi nutrisi melalui demo PMT untuk pencegahan stunting dan peningkatan gizi balita serta ibu.",
     "kpi": [
       "Jumlah balita/ibu sasaran",
@@ -61,6 +64,7 @@
     "nama": "Gerakan Sehat Ibu dan Anak",
     "kategori": "Kesehatan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Gerakan promotif kesehatan ibu-anak yang dikaitkan dengan kegiatan posyandu dan layanan KIA.",
     "kpi": [
       "Jumlah peserta",
@@ -80,6 +84,7 @@
     "nama": "Pembuatan biopori",
     "kategori": "Lingkungan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Intervensi lingkungan permukiman melalui pembuatan biopori untuk konservasi air dan pengurangan potensi genangan.",
     "kpi": [
       "Jumlah lubang biopori",
@@ -99,6 +104,7 @@
     "nama": "Pemilahan sampah",
     "kategori": "Lingkungan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Sosialisasi dan penerapan pemilahan sampah rumah tangga untuk mendorong konsumsi-produksi bertanggung jawab dan pengurangan emisi.",
     "kpi": [
       "Jumlah rumah ikut pemilahan",
@@ -118,6 +124,7 @@
     "nama": "Podcast hukum lingkungan",
     "kategori": "Pendidikan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Produksi podcast edukatif untuk meningkatkan literasi hukum lingkungan dan kesadaran publik terkait praktik berkelanjutan.",
     "kpi": [
       "Jumlah episode",
@@ -137,6 +144,7 @@
     "nama": "Pelatihan Excel/Spreadsheet & GDrive untuk audit desa",
     "kategori": "Tata Kelola",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pelatihan penguatan kapasitas perangkat desa untuk transparansi dan pengelolaan arsip berbasis spreadsheet dan Google Drive.",
     "kpi": [
       "Jumlah peserta pelatihan",
@@ -156,6 +164,7 @@
     "nama": "Sosialisasi Desa Sehat",
     "kategori": "Kesehatan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Program umbrella PHBS untuk memperkuat kesehatan komunitas, sanitasi, dan kualitas lingkungan permukiman.",
     "kpi": [
       "Jumlah peserta",
@@ -175,6 +184,7 @@
     "nama": "Pelatihan merajut",
     "kategori": "UMKM",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pemberdayaan ekonomi kreatif melalui pelatihan merajut, berpotensi membentuk kelompok produktif/UMKM perempuan.",
     "kpi": [
       "Jumlah peserta",
@@ -194,6 +204,7 @@
     "nama": "Kerajinan dari sampah anorganik",
     "kategori": "UMKM",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pelatihan daur ulang sampah anorganik menjadi produk kerajinan bernilai ekonomi dengan pendekatan 3R.",
     "kpi": [
       "Jumlah peserta",
@@ -213,6 +224,7 @@
     "nama": "Gebyar Ramadhan Desa",
     "kategori": "Sosial",
     "status": "planned",
+"progress": 0,
     "ringkas": "Kegiatan komunitas untuk memperkuat kohesi sosial, partisipasi warga, dan kolaborasi lintas pihak di tingkat desa.",
     "kpi": [
       "Jumlah kegiatan",
@@ -232,6 +244,7 @@
     "nama": "Sosialisasi AutoCAD dan RAB",
     "kategori": "Pendidikan",
     "status": "planned",
+"progress": 0,
     "ringkas": "Pelatihan kapasitas teknis berbasis vokasi terkait AutoCAD dan penyusunan RAB sebagai peningkatan skill infrastruktur dasar.",
     "kpi": [
       "Jumlah peserta",
