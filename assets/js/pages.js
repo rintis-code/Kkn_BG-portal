@@ -81,7 +81,7 @@ function prokerCardMini(p) {
         ${safeText(p.ringkas || "")}
       </div>
 
-      <!-- PROGRESS BAR -->
+      <!-- PROGRESS BAR  -->
       <div class="mt-4">
         <div class="flex items-center justify-between text-xs font-bold text-slate-600">
           <span>Progress</span>
