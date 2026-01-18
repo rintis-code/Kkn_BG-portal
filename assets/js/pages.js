@@ -29,27 +29,79 @@ async function initNavbar(active) {
 }
 
 function prokerCardMini(p) {
-  const outputs = (p.output || []).slice(0, 2).map(o =>
-    `<a class="text-sm font-medium text-slate-700 hover:text-slate-900 underline underline-offset-4"
-        href="${o.link}" target="_blank" rel="noopener">${safeText(o.label)}</a>`
-  ).join(" · ");
+  const outputs = (p.output || []).slice(0, 2).map(o => `
+    <a href="${safeText(o.link || "#")}" target="_blank" rel="noopener"
+      class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700 hover:bg-white ring-1 ring-slate-200">
+      ${safeText(o.label || "Output")}
+    </a>
+  `).join("");
+
+  const status = (p.status || "planned").toLowerCase();
+  const statusLabel =
+    status === "done" ? "Selesai" :
+    status === "ongoing" ? "Berjalan" :
+    "Rencana";
+
+  const statusClass =
+    status === "done" ? "bg-emerald-100 text-emerald-800 ring-emerald-200" :
+    status === "ongoing" ? "bg-amber-100 text-amber-800 ring-amber-200" :
+    "bg-slate-100 text-slate-800 ring-slate-200";
+
+  // progress (0-100)
+  let prog = Number(p.progress ?? 0);
+  if (Number.isNaN(prog)) prog = 0;
+  prog = Math.max(0, Math.min(100, prog));
+
+  // jika status done tapi progress belum 100 -> paksa 100 (operasional)
+  if (status === "done") prog = 100;
+
+  const progLabel =
+    prog >= 100 ? "100% (Selesai)" :
+    prog >= 70 ? `${prog}% (Hampir selesai)` :
+    prog >= 40 ? `${prog}% (Berjalan)` :
+    `${prog}% (Persiapan)`;
 
   return `
-    <article class="group rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200 hover:shadow-md transition">
+    <div class="rounded-2xl bg-white/70 p-5 ring-1 ring-white/30 backdrop-blur">
       <div class="flex items-start justify-between gap-3">
-        <div>
-          <div class="text-xs font-semibold text-slate-500">${safeText(p.id)} · ${safeText(p.kategori || "-")}</div>
-          <h3 class="mt-1 text-lg font-bold text-slate-900">${safeText(p.nama)}</h3>
+        <div class="min-w-0">
+          <div class="text-xs font-bold text-slate-500">${safeText(p.id || "")}</div>
+          <div class="mt-1 text-base font-extrabold text-slate-900">
+            ${safeText(p.nama || "-")}
+          </div>
         </div>
-        <div>${badgeStatus(p.status)}</div>
+        <div class="shrink-0">
+          <span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-extrabold ring-1 ${statusClass}">
+            ${statusLabel}
+          </span>
+        </div>
       </div>
-      <p class="mt-3 text-sm leading-relaxed text-slate-600">${safeText(p.ringkas)}</p>
-      <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-600">
-        <span class="rounded-full bg-slate-100 px-3 py-1">PIC: ${safeText(p.pic || "-")}</span>
-        <span class="rounded-full bg-slate-100 px-3 py-1">Tanggal: ${fmtDate(p.tanggal)}</span>
+
+      <div class="mt-2 text-sm text-slate-600">
+        ${safeText(p.ringkas || "")}
       </div>
-      ${outputs ? `<div class="mt-4 text-sm text-slate-600">${outputs}</div>` : ``}
-    </article>
+
+      <!-- PROGRESS BAR -->
+      <div class="mt-4">
+        <div class="flex items-center justify-between text-xs font-bold text-slate-600">
+          <span>Progress</span>
+          <span>${safeText(progLabel)}</span>
+        </div>
+        <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-200 ring-1 ring-slate-100">
+          <div class="h-full rounded-full bg-slate-900" style="width: ${prog}%"></div>
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        ${outputs || `<span class="text-xs text-slate-500">Belum ada output.</span>`}
+      </div>
+
+      <div class="mt-3 text-xs text-slate-500">
+        PIC: <span class="font-bold text-slate-700">${safeText(p.pic || "TBD")}</span>
+        <span class="mx-2">•</span>
+        Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
+      </div>
+    </div>
   `;
 }
 
