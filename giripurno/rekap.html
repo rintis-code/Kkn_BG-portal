@@ -110,5 +110,24 @@
       if (typeof window.initRekap === "function") window.initRekap();
     });
   </script>
+  <script>
+  (function(){
+    function run(){
+      if (typeof window.initRekap === "function") {
+        window.initRekap();
+      } else {
+        // tampilkan tanda kalau initRekap belum ada
+        const el = document.getElementById("rk_total");
+        if (el) el.textContent = "JS?";
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", run);
+    } else {
+      run();
+    }
+  })();
+</script>
+
 </body>
 </html>
