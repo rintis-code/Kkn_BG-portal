@@ -1,1 +1,129 @@
-1
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rekap Mingguan — Banjarsari</title>
+  <meta name="description" content="Rekap mingguan progres program kerja KKN Desa Banjarsari." />
+
+  <!-- Styles (ikut template portal) -->
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <!-- JS core -->
+  <script defer src="../assets/js/app.js"></script>
+  <script defer src="../assets/js/pages.js"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <!-- Top bar -->
+  <header class="mx-auto max-w-6xl px-4 py-6">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <div class="text-xs font-extrabold tracking-widest text-slate-400 uppercase">KKN BG Portal</div>
+        <h1 class="mt-1 text-2xl font-black">Rekap Mingguan — Desa Banjarsari</h1>
+        <p class="mt-1 text-sm text-slate-300">
+          Ringkasan progres proker, highlight yang perlu perhatian, dan daftar update terbaru.
+        </p>
+      </div>
+
+      <nav class="flex flex-wrap items-center gap-2">
+        <a class="rounded-full bg-white/10 px-4 py-2 text-sm font-bold ring-1 ring-white/15 hover:bg-white/15"
+           href="./">Home</a>
+        <a class="rounded-full bg-white/10 px-4 py-2 text-sm font-bold ring-1 ring-white/15 hover:bg-white/15"
+           href="./proker.html">Proker</a>
+        <a class="rounded-full bg-white/10 px-4 py-2 text-sm font-bold ring-1 ring-white/15 hover:bg-white/15"
+           href="./dokumentasi.html">Dokumentasi</a>
+        <a class="rounded-full bg-white/10 px-4 py-2 text-sm font-bold ring-1 ring-white/15 hover:bg-white/15"
+           href="./output.html">Output</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pb-16">
+    <!-- Summary cards -->
+    <section class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-xs font-extrabold tracking-widest text-slate-400 uppercase">Total Proker</div>
+        <div id="rk_total" class="mt-2 text-3xl font-black">-</div>
+        <div class="mt-1 text-xs text-slate-300">Jumlah proker yang terdaftar di sistem.</div>
+      </div>
+
+      <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-xs font-extrabold tracking-widest text-slate-400 uppercase">Status</div>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="rounded-full bg-slate-100/15 px-3 py-1 text-xs font-extrabold ring-1 ring-white/10">
+            Planned: <span id="rk_planned">-</span>
+          </span>
+          <span class="rounded-full bg-amber-200/15 px-3 py-1 text-xs font-extrabold ring-1 ring-amber-200/20">
+            Ongoing: <span id="rk_ongoing">-</span>
+          </span>
+          <span class="rounded-full bg-emerald-200/15 px-3 py-1 text-xs font-extrabold ring-1 ring-emerald-200/20">
+            Done: <span id="rk_done">-</span>
+          </span>
+        </div>
+        <div class="mt-2 text-xs text-slate-300">Rekap berbasis field <b>status</b> pada JSON proker.</div>
+      </div>
+
+      <div class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-xs font-extrabold tracking-widest text-slate-400 uppercase">Perhatian</div>
+        <div class="mt-2 text-sm text-slate-200">
+          <div>Belum update ≥ <b>7 hari</b>: <span id="rk_late" class="font-black">-</span></div>
+          <div class="mt-1">Update minggu ini: <span id="rk_week" class="font-black">-</span></div>
+        </div>
+        <div class="mt-2 text-xs text-slate-300">
+          Menggunakan <b>updatedAt</b>. (Jika belum terisi, dianggap “belum update”.)
+        </div>
+      </div>
+    </section>
+
+    <!-- Late list -->
+    <section class="mt-8 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-black">Proker Perlu Perhatian (Telat Update)</h2>
+        <div class="text-xs text-slate-300">Ambang: 7 hari</div>
+      </div>
+      <div id="rk_late_list" class="mt-4 grid gap-3 md:grid-cols-2">
+        <!-- filled by JS -->
+      </div>
+      <div id="rk_late_empty" class="mt-3 text-sm text-slate-300 hidden">
+        Tidak ada proker yang telat update. ✅
+      </div>
+    </section>
+
+    <!-- Latest updates -->
+    <section class="mt-8 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-black">Update Terbaru</h2>
+        <div class="text-xs text-slate-300">Urut berdasarkan updatedAt (desc)</div>
+      </div>
+      <div id="rk_recent" class="mt-4 grid gap-3 md:grid-cols-2">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <!-- Optional: Progress leaders (if progress field exists) -->
+    <section class="mt-8 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-black">Top Proker (Progress Tertinggi)</h2>
+        <div class="text-xs text-slate-300">Jika field <b>progress</b> belum dipakai, bagian ini tetap aman.</div>
+      </div>
+      <div id="rk_top_progress" class="mt-4 grid gap-3 md:grid-cols-2">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <footer class="mt-10 text-xs text-slate-400">
+      <div>Catatan: halaman ini membaca data dari <code>banjarsari/data/proker.json</code>.</div>
+    </footer>
+  </main>
+
+  <!-- Inline JS minimal: panggil initRekap jika tersedia -->
+  <script>
+    // Jika pages.js sudah punya initRekap, maka akan jalan otomatis lewat router.
+    // Tapi untuk jaga-jaga, kita panggil manual juga.
+    window.addEventListener("DOMContentLoaded", () => {
+      if (typeof window.initRekap === "function") window.initRekap();
+    });
+  </script>
+</body>
+</html>
