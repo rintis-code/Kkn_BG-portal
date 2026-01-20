@@ -101,7 +101,7 @@ function prokerCardMini(p) {
   <span class="mx-2">•</span>
   Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
   <span class="mx-2">•</span>
-  Update: <span class="font-bold text-slate-700">${safeText(p.updatedAt || "-")}</span>
+ Update: <span class="font-bold text-slate-700">${safeText(p.updatedAt || "-")}</span>
 </div>
 }
 
