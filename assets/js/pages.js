@@ -1,7 +1,6 @@
 // assets/js/pages.js
-// Inisialisasi per halaman desa:
-// - File HTML desa memanggil JSON dengan path: "data/site.json", dll.
-// - Script dipanggil dari halaman desa: ../assets/js/pages.js
+// Catatan: helper berikut diasumsikan ada di ../assets/js/app.js
+// $(), $$(), loadJSON(), safeText(), fmtDate(), badgeStatus()
 
 async function initNavbar(active) {
   const site = await loadJSON("data/site.json");
@@ -28,6 +27,9 @@ async function initNavbar(active) {
   });
 }
 
+// ===============================
+// Mini card untuk preview (Home)
+// ===============================
 function prokerCardMini(p) {
   const outputs = (p.output || []).slice(0, 2).map(o => `
     <a href="${safeText(o.link || "#")}" target="_blank" rel="noopener"
@@ -51,8 +53,6 @@ function prokerCardMini(p) {
   let prog = Number(p.progress ?? 0);
   if (Number.isNaN(prog)) prog = 0;
   prog = Math.max(0, Math.min(100, prog));
-
-  // jika status done tapi progress belum 100 -> paksa 100 (operasional)
   if (status === "done") prog = 100;
 
   const progLabel =
@@ -81,7 +81,6 @@ function prokerCardMini(p) {
         ${safeText(p.ringkas || "")}
       </div>
 
-      <!-- PROGRESS BAR  -->
       <div class="mt-4">
         <div class="flex items-center justify-between text-xs font-bold text-slate-600">
           <span>Progress</span>
@@ -96,15 +95,20 @@ function prokerCardMini(p) {
         ${outputs || `<span class="text-xs text-slate-500">Belum ada output.</span>`}
       </div>
 
-      <<div class="mt-3 text-xs text-slate-500">
-  PIC: <span class="font-bold text-slate-700">${safeText(p.pic || "TBD")}</span>
-  <span class="mx-2">•</span>
-  Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
-  <span class="mx-2">•</span>
- Update: <span class="font-bold text-slate-700">${safeText(p.updatedAt || "-")}</span>
-</div>
+      <div class="mt-3 text-xs text-slate-500">
+        PIC: <span class="font-bold text-slate-700">${safeText(p.pic || "TBD")}</span>
+        <span class="mx-2">•</span>
+        Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
+        <span class="mx-2">•</span>
+        Update: <span class="font-bold text-slate-700">${safeText(p.updatedAt || "-")}</span>
+      </div>
+    </div>
+  `;
 }
 
+// ===============================
+// HOME (index.html desa)
+// ===============================
 async function initHome() {
   const site = await loadJSON("data/site.json");
 
@@ -115,7 +119,6 @@ async function initHome() {
   const btnForm = $("#btnForm");
   if (btnForm && site.ctaFormLaporan) btnForm.href = site.ctaFormLaporan;
 
-  // Highlights (gabungan: statis dari site.json + dinamis dari proker.json)
   const wrap = $("#highlights");
   const proker = await loadJSON("data/proker.json");
 
@@ -124,12 +127,12 @@ async function initHome() {
   const ongoing = proker.filter(x => x.status === "ongoing").length;
   const done = proker.filter(x => x.status === "done").length;
 
-const staticH = (site.heroHighlights || []).map(h => `
-  <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
-    <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
-    <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
-  </div>
-`).join("");
+  const staticH = (site.heroHighlights || []).map(h => `
+    <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+      <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
+      <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
+    </div>
+  `).join("");
 
   const dynamicH = `
     <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
@@ -161,6 +164,9 @@ const staticH = (site.heroHighlights || []).map(h => `
   if (prev) prev.innerHTML = latest.map(x => prokerCardMini(x)).join("");
 }
 
+// ===============================
+// TIM (profil.html)
+// ===============================
 async function initTim() {
   const tim = await loadJSON("data/tim.json");
   const wrap = $("#timList");
@@ -182,11 +188,13 @@ async function initTim() {
   `).join("");
 }
 
+// ===============================
+// PROKER (proker.html)
+// ===============================
 async function initProker() {
   const res = await fetch("data/proker.json", { cache: "no-store" });
-if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
-const data = await res.json();
-
+  if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
+  const data = await res.json();
 
   // Isi dropdown kategori
   const categories = Array.from(new Set(data.map(d => d.kategori).filter(Boolean))).sort();
@@ -197,7 +205,7 @@ const data = await res.json();
       categories.map(c => `<option value="${safeText(c)}">${safeText(c)}</option>`).join("");
   }
 
-// Tabs kategori (kekinian)
+  // Tabs kategori (kekinian)
   const tabsWrap = $("#kategoriTabs");
   let activeCat = "";
 
@@ -221,7 +229,7 @@ const data = await res.json();
       btn.addEventListener("click", () => {
         activeCat = btn.getAttribute("data-cat") || "";
         const fKat = $("#filterKategori");
-        if (fKat) fKat.value = activeCat; // sinkron dropdown
+        if (fKat) fKat.value = activeCat;
         renderTabs();
         render();
       });
@@ -232,7 +240,7 @@ const data = await res.json();
     const kpi = (p.kpi || []).map(x => `<li class="text-sm text-slate-700">${safeText(x)}</li>`).join("");
     const outputs = (p.output || []).map(o => `
       <a class="inline-flex items-center gap-2 rounded-xl bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 hover:bg-white"
-         href="${o.link}" target="_blank" rel="noopener">
+         href="${safeText(o.link || "#")}" target="_blank" rel="noopener">
         <span class="h-2 w-2 rounded-full bg-slate-400"></span>${safeText(o.label)}
       </a>
     `).join("");
@@ -246,8 +254,8 @@ const data = await res.json();
             <p class="mt-3 text-sm leading-relaxed text-slate-600">${safeText(p.ringkas)}</p>
           </div>
           <div class="flex items-center gap-3">
-            ${badgeStatus(p.status)}
-            <div class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">${fmtDate(p.tanggal)}</div>
+            ${typeof badgeStatus === "function" ? badgeStatus(p.status) : ""}
+            <div class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">${typeof fmtDate === "function" ? fmtDate(p.tanggal) : safeText(p.tanggal)}</div>
           </div>
         </div>
 
@@ -273,7 +281,7 @@ const data = await res.json();
     const st = $("#filterStatus")?.value || "";
 
     const filtered = data.filter(p => {
-      const hay = `${p.id} ${p.nama} ${p.kategori} ${(p.kataKunci||[]).join(" ")} ${p.pic}`.toLowerCase();
+      const hay = `${p.id} ${p.nama} ${p.kategori} ${(p.kataKunci || []).join(" ")} ${p.pic || ""}`.toLowerCase();
       const okQ = !q || hay.includes(q);
       const okCat = !cat || p.kategori === cat;
       const okSt = !st || p.status === st;
@@ -299,7 +307,11 @@ const data = await res.json();
 
   renderTabs();
   render();
+}
 
+// ===============================
+// DOKUMENTASI (dokumentasi.html)
+// ===============================
 async function initDokumentasi() {
   const docs = await loadJSON("data/dokumentasi.json");
   const grid = $("#docGrid");
@@ -307,20 +319,23 @@ async function initDokumentasi() {
 
   grid.innerHTML = docs.map(d => `
     <a class="group block overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-md transition"
-       href="${d.link}" target="_blank" rel="noopener">
+       href="${safeText(d.link || "#")}" target="_blank" rel="noopener">
       <div class="aspect-[16/10] bg-slate-100">
         ${d.thumb
-          ? `<img src="${d.thumb}" alt="${safeText(d.judul)}" class="h-full w-full object-cover group-hover:scale-[1.02] transition">`
+          ? `<img src="${safeText(d.thumb)}" alt="${safeText(d.judul)}" class="h-full w-full object-cover group-hover:scale-[1.02] transition">`
           : `<div class="flex h-full items-center justify-center text-sm text-slate-500">No image</div>`}
       </div>
       <div class="p-4">
         <div class="text-sm font-bold text-slate-900">${safeText(d.judul)}</div>
-        <div class="mt-1 text-xs text-slate-600">${fmtDate(d.tanggal)} · ${safeText(d.tipe)}</div>
+        <div class="mt-1 text-xs text-slate-600">${typeof fmtDate === "function" ? fmtDate(d.tanggal) : safeText(d.tanggal)} · ${safeText(d.tipe)}</div>
       </div>
     </a>
   `).join("");
 }
 
+// ===============================
+// OUTPUT (output.html)
+// ===============================
 async function initOutput() {
   const proker = await loadJSON("data/proker.json");
   const all = [];
@@ -335,7 +350,7 @@ async function initOutput() {
 
   wrap.innerHTML = dataset.map(o => `
     <a class="flex items-center justify-between rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200 hover:shadow-md transition"
-       href="${o.link}" target="_blank" rel="noopener">
+       href="${safeText(o.link || "#")}" target="_blank" rel="noopener">
       <div>
         <div class="text-xs font-semibold text-slate-500">${safeText(o.id)} · ${safeText(o.proker)}</div>
         <div class="mt-1 text-lg font-bold text-slate-900">${safeText(o.label)}</div>
@@ -455,3 +470,24 @@ window.initRekap = async function initRekap() {
     console.error("initRekap error:", e);
   }
 };
+
+// ===============================
+// Auto-run berdasarkan atribut <body data-page="...">
+// ===============================
+document.addEventListener("DOMContentLoaded", async () => {
+  const page = document.body?.dataset?.page || "";
+  try {
+    if (typeof initNavbar === "function") {
+      // active key sesuai page (home/proker/dokumentasi/output/rekap/tim)
+      await initNavbar(page);
+    }
+    if (page === "home") await initHome();
+    if (page === "tim") await initTim();
+    if (page === "proker") await initProker();
+    if (page === "dokumentasi") await initDokumentasi();
+    if (page === "output") await initOutput();
+    if (page === "rekap") await window.initRekap();
+  } catch (e) {
+    console.error("pages.js run error:", e);
+  }
+});
