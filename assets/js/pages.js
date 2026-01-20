@@ -341,3 +341,117 @@ async function initOutput() {
     </a>
   `).join("");
 }
+
+// ===============================
+// Rekap Mingguan (rekap.html)
+// ===============================
+window.initRekap = async function initRekap() {
+  try {
+    // Pastikan elemen rekap ada (biar tidak ganggu halaman lain)
+    if (!document.getElementById("rk_total")) return;
+
+    // rekap.html berada di /{desa}/rekap.html sehingga data relatif = "data/proker.json"
+    const data = await loadJSON("data/proker.json");
+    const proker = Array.isArray(data) ? data : [];
+
+    const total = proker.length;
+
+    const normStatus = (s) => String(s || "planned").toLowerCase();
+    let planned = 0, ongoing = 0, done = 0;
+
+    const parseYMD = (s) => {
+      if (!s) return null;
+      const m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (!m) return null;
+      const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+      return isNaN(d.getTime()) ? null : d;
+    };
+
+    const today = new Date();
+    const daysDiff = (d) => Math.floor((today.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
+
+    const late = [];
+    let updatedWeek = 0;
+    const recent = [];
+    const topProgress = [];
+
+    proker.forEach(p => {
+      const st = normStatus(p.status);
+      if (st === "done") done++;
+      else if (st === "ongoing") ongoing++;
+      else planned++;
+
+      const d = parseYMD(p.updatedAt);
+      if (!d) {
+        late.push({ p, days: 9999 });
+      } else {
+        const dd = daysDiff(d);
+        if (dd >= 7) late.push({ p, days: dd });
+        if (dd <= 7) updatedWeek++;
+        recent.push({ p, d });
+      }
+
+      let prog = Number(p.progress ?? 0);
+      if (Number.isNaN(prog)) prog = 0;
+      prog = Math.max(0, Math.min(100, prog));
+      if (st === "done") prog = 100;
+      topProgress.push({ p, prog });
+    });
+
+    late.sort((a, b) => b.days - a.days);
+    recent.sort((a, b) => (b.d?.getTime?.() || 0) - (a.d?.getTime?.() || 0));
+    topProgress.sort((a, b) => b.prog - a.prog);
+
+    const setText = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = String(val);
+    };
+
+    setText("rk_total", total);
+    setText("rk_planned", planned);
+    setText("rk_ongoing", ongoing);
+    setText("rk_done", done);
+    setText("rk_late", late.length);
+    setText("rk_week", updatedWeek);
+
+    const cardHTML = (p, note) => `
+      <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+        <div class="text-xs font-extrabold tracking-widest text-slate-300 uppercase">${safeText(p.id || "")}</div>
+        <div class="mt-1 text-base font-black text-white">${safeText(p.nama || "-")}</div>
+        <div class="mt-1 text-sm text-slate-200">${safeText(p.ringkas || "")}</div>
+        <div class="mt-3 text-xs text-slate-300">
+          Status: <span class="font-black text-white">${safeText(p.status || "planned")}</span>
+          <span class="mx-2">•</span>
+          Update: <span class="font-black text-white">${safeText(p.updatedAt || "-")}</span>
+          ${note ? `<span class="mx-2">•</span><span class="font-black text-white">${safeText(note)}</span>` : ""}
+        </div>
+      </div>
+    `;
+
+    // Late list
+    const lateWrap = document.getElementById("rk_late_list");
+    const lateEmpty = document.getElementById("rk_late_empty");
+    if (lateWrap) {
+      lateWrap.innerHTML = late.slice(0, 12).map(x => {
+        const note = (x.days === 9999) ? "Belum pernah update" : `Telat ${x.days} hari`;
+        return cardHTML(x.p, note);
+      }).join("");
+      if (lateEmpty) lateEmpty.classList.toggle("hidden", late.length !== 0);
+    }
+
+    // Recent updates
+    const recentWrap = document.getElementById("rk_recent");
+    if (recentWrap) {
+      recentWrap.innerHTML = recent.slice(0, 8).map(x => cardHTML(x.p, "Update terbaru")).join("");
+    }
+
+    // Top progress
+    const topWrap = document.getElementById("rk_top_progress");
+    if (topWrap) {
+      topWrap.innerHTML = topProgress.slice(0, 8).map(x => cardHTML(x.p, `Progress ${x.prog}%`)).join("");
+    }
+
+  } catch (e) {
+    console.error("initRekap error:", e);
+  }
+};
