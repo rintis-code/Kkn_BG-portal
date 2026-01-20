@@ -183,7 +183,10 @@ async function initTim() {
 }
 
 async function initProker() {
-  const data = await loadJSON("data/proker.json");
+  const res = await fetch("data/proker.json", { cache: "no-store" });
+if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
+const data = await res.json();
+
 
   // Isi dropdown kategori
   const categories = Array.from(new Set(data.map(d => d.kategori).filter(Boolean))).sort();
