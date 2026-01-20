@@ -350,18 +350,13 @@ async function initOutput() {
 // ===============================
 window.initRekap = async function initRekap() {
   try {
-    document.getElementById("rk_total").textContent = "RUN";
-
-    // Pastikan elemen rekap ada (biar tidak ganggu halaman lain)
     if (!document.getElementById("rk_total")) return;
 
-    // rekap.html berada di /{desa}/rekap.html sehingga data relatif = "data/proker.json"
-   const res = await fetch("data/proker.json", { cache: "no-store" });
-if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
-const data = await res.json();
+    const res = await fetch("data/proker.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
+    const data = await res.json();
 
     const proker = Array.isArray(data) ? data : [];
-
     const total = proker.length;
 
     const normStatus = (s) => String(s || "planned").toLowerCase();
@@ -424,19 +419,18 @@ const data = await res.json();
 
     const cardHTML = (p, note) => `
       <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
-        <div class="text-xs font-extrabold tracking-widest text-slate-300 uppercase">${safeText(p.id || "")}</div>
-        <div class="mt-1 text-base font-black text-white">${safeText(p.nama || "-")}</div>
-        <div class="mt-1 text-sm text-slate-200">${safeText(p.ringkas || "")}</div>
+        <div class="text-xs font-extrabold tracking-widest text-slate-300 uppercase">${(p.id || "")}</div>
+        <div class="mt-1 text-base font-black text-white">${(p.nama || "-")}</div>
+        <div class="mt-1 text-sm text-slate-200">${(p.ringkas || "")}</div>
         <div class="mt-3 text-xs text-slate-300">
-          Status: <span class="font-black text-white">${safeText(p.status || "planned")}</span>
+          Status: <span class="font-black text-white">${(p.status || "planned")}</span>
           <span class="mx-2">•</span>
-          Update: <span class="font-black text-white">${safeText(p.updatedAt || "-")}</span>
-          ${note ? `<span class="mx-2">•</span><span class="font-black text-white">${safeText(note)}</span>` : ""}
+          Update: <span class="font-black text-white">${(p.updatedAt || "-")}</span>
+          ${note ? `<span class="mx-2">•</span><span class="font-black text-white">${note}</span>` : ""}
         </div>
       </div>
     `;
 
-    // Late list
     const lateWrap = document.getElementById("rk_late_list");
     const lateEmpty = document.getElementById("rk_late_empty");
     if (lateWrap) {
@@ -447,13 +441,11 @@ const data = await res.json();
       if (lateEmpty) lateEmpty.classList.toggle("hidden", late.length !== 0);
     }
 
-    // Recent updates
     const recentWrap = document.getElementById("rk_recent");
     if (recentWrap) {
       recentWrap.innerHTML = recent.slice(0, 8).map(x => cardHTML(x.p, "Update terbaru")).join("");
     }
 
-    // Top progress
     const topWrap = document.getElementById("rk_top_progress");
     if (topWrap) {
       topWrap.innerHTML = topProgress.slice(0, 8).map(x => cardHTML(x.p, `Progress ${x.prog}%`)).join("");
