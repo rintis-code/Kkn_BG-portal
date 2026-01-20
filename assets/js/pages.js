@@ -351,7 +351,10 @@ window.initRekap = async function initRekap() {
     if (!document.getElementById("rk_total")) return;
 
     // rekap.html berada di /{desa}/rekap.html sehingga data relatif = "data/proker.json"
-    const data = await loadJSON("data/proker.json");
+   const res = await fetch("data/proker.json", { cache: "no-store" });
+if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
+const data = await res.json();
+
     const proker = Array.isArray(data) ? data : [];
 
     const total = proker.length;
