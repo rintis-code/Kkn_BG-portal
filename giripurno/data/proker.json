@@ -198,25 +198,5 @@
     "sdgPendukung": ["SDG 2", "SDG 4", "SDG 5"],
     "jenisDampak": "Langsung"
   }
-  {
-  "id": "152-10",
-  "nama": "Sosialisasi HAKI untuk UMKM",
-  "kategori": "UMKM",
-  "status": "planned",
-  "progress": 0,
-  "updatedAt": "2026-01-18",
-  "ringkas": "Sosialisasi dasar HAKI (merek, hak cipta, desain industri) untuk UMKM serta pendampingan awal penyiapan dokumen dan alur pendaftaran.",
-  "kpi": [
-    "Jumlah UMKM peserta",
-    "Materi/slide HAKI tersedia",
-    "Daftar UMKM yang siap didampingi",
-    "Minimal 1 draft berkas pengajuan (contoh)"
-  ],
-  "pic": "TBD",
-  "tanggal": "2026-01-22",
-  "output": [],
-  "kataKunci": ["haki", "merek", "hak cipta", "umkm", "legalitas"],
-  "sdgUtama": "SDG 8",
-  "sdgPendukung": ["SDG 4", "SDG 9", "SDG 16"]
-}
+ }
 ]
