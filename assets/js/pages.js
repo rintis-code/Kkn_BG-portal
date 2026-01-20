@@ -124,11 +124,11 @@ async function initHome() {
   const ongoing = proker.filter(x => x.status === "ongoing").length;
   const done = proker.filter(x => x.status === "done").length;
 
-  const staticH = (site.heroHighlights || []).map(h => `
-<div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
-  <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
-  <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
-</div>
+const staticH = (site.heroHighlights || []).map(h => `
+  <div class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur">
+    <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
+    <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
+  </div>
 `).join("");
 
   const dynamicH = `
