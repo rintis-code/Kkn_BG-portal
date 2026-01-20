@@ -350,6 +350,8 @@ async function initOutput() {
 // ===============================
 window.initRekap = async function initRekap() {
   try {
+    document.getElementById("rk_total").textContent = "RUN";
+
     // Pastikan elemen rekap ada (biar tidak ganggu halaman lain)
     if (!document.getElementById("rk_total")) return;
 
