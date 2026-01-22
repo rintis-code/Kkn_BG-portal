@@ -27,6 +27,26 @@ async function initNavbar(active) {
   });
 }
 
+/**
+ * Render PIC agar:
+ * - Jika pic adalah array -> tampil per baris (tanpa koma)
+ * - Jika string -> tampil 1 baris
+ * - Jika kosong -> fallback
+ */
+function renderPic(pic, fallback = "TBD") {
+  if (Array.isArray(pic)) {
+    const items = pic
+      .filter(v => v !== null && v !== undefined && String(v).trim() !== "")
+      .map(v => `<div>${safeText(v)}</div>`)
+      .join("");
+    return items || `<div>${safeText(fallback)}</div>`;
+  }
+  if (pic === null || pic === undefined || String(pic).trim() === "") {
+    return `<div>${safeText(fallback)}</div>`;
+  }
+  return `<div>${safeText(pic)}</div>`;
+}
+
 // ===============================
 // Mini card untuk preview (Home)
 // ===============================
@@ -96,7 +116,10 @@ function prokerCardMini(p) {
       </div>
 
       <div class="mt-3 text-xs text-slate-500">
-        PIC: <span class="font-bold text-slate-700">${safeText(p.pic || "TBD")}</span>
+        PIC:
+        <span class="font-bold text-slate-700">
+          ${renderPic(p.pic, "TBD")}
+        </span>
         <span class="mx-2">•</span>
         Tgl: <span class="font-bold text-slate-700">${safeText(p.tanggal || "-")}</span>
         <span class="mx-2">•</span>
@@ -262,7 +285,9 @@ async function initProker() {
         <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
           <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-100">
             <div class="text-xs font-semibold text-slate-500">PIC</div>
-            <div class="mt-1 font-bold text-slate-900">${safeText(p.pic || "-")}</div>
+            <div class="mt-1 font-bold text-slate-900">
+              ${renderPic(p.pic, "-")}
+            </div>
           </div>
           <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-100 md:col-span-2">
             <div class="text-xs font-semibold text-slate-500">KPI</div>
