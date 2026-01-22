@@ -4,8 +4,8 @@
     "nama": "Bibit tanaman dibagikan + panduan tanam/perawatan",
     "kategori": "Ketahanan Pangan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Program pekarangan pangan lestari untuk memperkuat ketahanan pangan rumah tangga melalui distribusi bibit dan panduan budidaya.",
     "kpi": [
       "Jumlah bibit dibagikan",
@@ -14,7 +14,7 @@
       "Persentase bibit tertanam"
     ],
     "pic": [
-      "1. Yuswo Jati Kusumo.H1022097", 
+      "1. Yuswo Jati Kusumo.H1022097",
       "2. Nisrina Sabina.H1023079"
     ],
     "tanggal": "2026-01-10",
@@ -28,8 +28,8 @@
     "nama": "Cek kesehatan gratis",
     "kategori": "Kesehatan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Layanan pemeriksaan kesehatan preventif untuk warga, mendorong kesetaraan akses layanan dan deteksi risiko dini.",
     "kpi": [
       "Jumlah warga diperiksa",
@@ -52,8 +52,8 @@
     "nama": "Demo PMT pencegahan stunting",
     "kategori": "Kesehatan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Edukasi nutrisi melalui demo PMT untuk pencegahan stunting dan peningkatan gizi balita serta ibu.",
     "kpi": [
       "Jumlah balita/ibu sasaran",
@@ -62,8 +62,8 @@
       "Daftar hadir kegiatan"
     ],
     "pic": [
-      "1. Kynthia Carissa Destri.I0123088", 
-      "2.  Aureaninta Talitha Nada Kirana Purba.G0023029"
+      "1. Kynthia Carissa Destri.I0123088",
+      "2. Aureaninta Talitha Nada Kirana Purba.G0023029"
     ],
     "tanggal": "2026-01-12",
     "output": [],
@@ -76,8 +76,8 @@
     "nama": "Gerakan Sehat Ibu dan Anak",
     "kategori": "Kesehatan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Gerakan promotif kesehatan ibu-anak yang dikaitkan dengan kegiatan posyandu dan layanan KIA.",
     "kpi": [
       "Jumlah peserta",
@@ -86,7 +86,7 @@
       "Dokumentasi kegiatan"
     ],
     "pic": [
-      "1. Zainab Khalisah Nurulhaq.G0023207", 
+      "1. Zainab Khalisah Nurulhaq.G0023207",
       "2. Allyssa Rachma Nayla.G0023007"
     ],
     "tanggal": "2026-01-13",
@@ -100,8 +100,8 @@
     "nama": "Pembuatan biopori",
     "kategori": "Lingkungan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Intervensi lingkungan permukiman melalui pembuatan biopori untuk konservasi air dan pengurangan potensi genangan.",
     "kpi": [
       "Jumlah lubang biopori",
@@ -110,7 +110,7 @@
       "Panduan biopori tersedia"
     ],
     "pic": [
-      "1. Adhika Suryo Permadi.E0023005", 
+      "1. Adhika Suryo Permadi.E0023005",
       "2. Fadhly Mustofa Az-Zuhri.E0023186"
     ],
     "tanggal": "2026-01-14",
@@ -124,8 +124,8 @@
     "nama": "Pemilahan sampah",
     "kategori": "Lingkungan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Sosialisasi dan penerapan pemilahan sampah rumah tangga untuk mendorong konsumsi-produksi bertanggung jawab dan pengurangan emisi.",
     "kpi": [
       "Jumlah rumah ikut pemilahan",
@@ -134,7 +134,7 @@
       "Estimasi pengurangan volume sampah"
     ],
     "pic": [
-      "1. Isna Mar'atus Sholihah.I0123077", 
+      "1. Isna Mar'atus Sholihah.I0123077",
       "2. Arnando Yan Wardana.H1022009"
     ],
     "tanggal": "2026-01-15",
@@ -148,8 +148,8 @@
     "nama": "Podcast hukum lingkungan",
     "kategori": "Pendidikan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Produksi podcast edukatif untuk meningkatkan literasi hukum lingkungan dan kesadaran publik terkait praktik berkelanjutan.",
     "kpi": [
       "Jumlah episode",
@@ -158,7 +158,7 @@
       "Outline materi tersedia"
     ],
     "pic": [
-      "1. Alif Haedar Caraka Nusa.E0023036", 
+      "1. Alif Haedar Caraka Nusa.E0023036",
       "2. Muhammad Nur Azza.D0423040"
     ],
     "tanggal": "2026-01-16",
@@ -172,8 +172,8 @@
     "nama": "Pelatihan Excel/Spreadsheet & GDrive untuk audit desa",
     "kategori": "Tata Kelola",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Pelatihan penguatan kapasitas perangkat desa untuk transparansi dan pengelolaan arsip berbasis spreadsheet dan Google Drive.",
     "kpi": [
       "Jumlah peserta pelatihan",
@@ -182,7 +182,7 @@
       "Arsip Drive aktif"
     ],
     "pic": [
-      "1. Kustyanti Pratiwi.I0123087", 
+      "1. Kustyanti Pratiwi.I0123087",
       "2. Azzahra Cinta Kurnia Gusti.G0023033"
     ],
     "tanggal": "2026-01-17",
@@ -196,8 +196,8 @@
     "nama": "Sosialisasi Desa Sehat",
     "kategori": "Kesehatan",
     "status": "planned",
-"progress": 0,
-"updatedAt": "2026-01-18",
+    "progress": 0,
+    "updatedAt": "2026-01-18",
     "ringkas": "Program umbrella PHBS untuk memperkuat kesehatan komunitas, sanitasi, dan kualitas lingkungan permukiman.",
     "kpi": [
       "Jumlah peserta",
@@ -206,7 +206,7 @@
       "Poster/leaflet tersedia"
     ],
     "pic": [
-      "1. Iqbal Yassin Ramadhan.H1022042", 
+      "1. Iqbal Yassin Ramadhan.H1022042",
       "2. Arnando Yan Wardana.H1022009"
     ],
     "tanggal": "2026-01-18",
@@ -230,7 +230,7 @@
       "Rekap hasil pemeriksaan + dokumentasi"
     ],
     "pic": [
-      "1. Allyssa Rachma Nayla.G0023007", 
+      "1. Allyssa Rachma Nayla.G0023007",
       "2. Aureaninta Talitha Nada Kirana Purba.G0023029"
     ],
     "tanggal": "2026-01-19",
@@ -253,7 +253,7 @@
       "Dokumentasi kegiatan"
     ],
     "pic": [
-      "1. Yuswo Jati Kusumo.H1022097", 
+      "1. Yuswo Jati Kusumo.H1022097",
       "2. Alif Haedar Caraka Nusa.E0023036"
     ],
     "tanggal": "2026-01-20",
@@ -277,7 +277,7 @@
       "Contoh output RAB sederhana"
     ],
     "pic": [
-      "1. Kustyanti Pratiwi.I0123087", 
+      "1. Kustyanti Pratiwi.I0123087",
       "2. Khansa Tabina Putri Kusindra.I0123081"
     ],
     "tanggal": "2026-01-21",
@@ -301,7 +301,7 @@
       "Dokumentasi kegiatan"
     ],
     "pic": [
-      "1. Ica Clarissa Devi.I0123072", 
+      "1. Ica Clarissa Devi.I0123072",
       "2. Lisa Rahmawati.H0723095"
     ],
     "tanggal": "2026-01-22",
@@ -325,7 +325,7 @@
       "Dokumentasi kegiatan"
     ],
     "pic": [
-      "1. Zainab Khalisah Nurulhaq.G0023207", 
+      "1. Zainab Khalisah Nurulhaq.G0023207",
       "2. Azzahra Cinta Kurnia Gusti.G0023033"
     ],
     "tanggal": "2026-01-23",
@@ -349,7 +349,7 @@
       "Dokumentasi before-after"
     ],
     "pic": [
-      "1. Khansa Tabina Putri Kusindra.I0123081", 
+      "1. Khansa Tabina Putri Kusindra.I0123081",
       "2. Ica Clarissa Devi.I0123072"
     ],
     "tanggal": "2026-01-24",
