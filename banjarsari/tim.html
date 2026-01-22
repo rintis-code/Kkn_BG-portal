@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body data-page="tim" class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800">
+<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800">
   <!-- NAV -->
   <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/70 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
@@ -59,7 +59,7 @@
     </section>
 
     <section class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3" id="timList">
-      <!-- diisi oleh initTim() -->
+      <!-- diisi oleh script bawah -->
     </section>
 
     <footer class="mt-10 border-t border-slate-200 py-8 text-center text-sm text-slate-500">
@@ -70,9 +70,46 @@
   <!-- SCRIPTS -->
   <script src="../assets/js/app.js"></script>
   <script src="../assets/js/pages.js"></script>
+
+  <!-- PAKSA RENDER TIM: path JSON pasti benar -->
   <script>
-    initNavbar("tim");
-    initTim();
+    (async () => {
+      try {
+        // navbar aktif
+        if (typeof initNavbar === "function") await initNavbar("tim");
+
+        // IMPORTANT: pastikan path tim.json benar untuk folder desa
+        const tim = await loadJSON("data/tim.json"); // <-- tim.html dan data/ sejajar (banjarsari/data/tim.json)
+
+        const wrap = document.getElementById("timList");
+        if (!wrap) throw new Error("#timList tidak ditemukan");
+
+        wrap.innerHTML = (tim || []).map(t => `
+          <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <div class="text-lg font-bold text-slate-900">${safeText(t.nama || "-")}</div>
+            <div class="mt-1 text-sm text-slate-600">
+              ${safeText(t.peran || "-")}
+              ${t.prodi ? " · " + safeText(t.prodi) : ""}
+              ${t.fakultas ? " · " + safeText(t.fakultas) : ""}
+            </div>
+
+            <div class="mt-3 grid grid-cols-2 gap-2 text-sm text-slate-700">
+              <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-100">
+                <div class="text-xs text-slate-500">NIM</div>
+                <div class="font-semibold">${safeText(t.nim || "-")}</div>
+              </div>
+              <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-100">
+                <div class="text-xs text-slate-500">Kontak</div>
+                <div class="font-semibold">${safeText(t.kontak || "-")}</div>
+              </div>
+            </div>
+          </div>
+        `).join("");
+
+      } catch (e) {
+        console.error("TIM render error:", e);
+      }
+    })();
   </script>
 </body>
 </html>
