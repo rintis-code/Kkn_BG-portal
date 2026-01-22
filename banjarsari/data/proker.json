@@ -188,135 +188,129 @@
     "sdgUtama": "SDG 3",
     "sdgPendukung": ["SDG 6", "SDG 11"]
   },
- [
   {
     "id": "151-10",
     "nama": "Penguatan Upaya Preventif: Pemeriksaan Jentik Nyamuk Berbasis Rumah Tangga",
-    "kategori": "daur ulang; ekonomi",
+    "kategori": "Kesehatan",
     "status": "planned",
     "progress": 0,
     "updatedAt": "2026-01-18",
-    "ringkas": "Program promotif-preventif berbasis rumah tangga melalui pemeriksaan jentik nyamuk untuk menurunkan risiko penyakit berbasis vektor. Pelaksanaan dilengkapi sosialisasi singkat dan pencatatan temuan lapangan secara sederhana.",
+    "ringkas": "Program promotif–preventif berbasis rumah tangga melalui pemeriksaan jentik nyamuk untuk menurunkan risiko penyakit berbasis vektor, dilengkapi sosialisasi singkat dan rekap temuan lapangan.",
     "kpi": [
       "Jumlah rumah/KK diperiksa",
       "Jumlah titik temuan jentik (jika ada)",
       "Jumlah warga terlibat",
-      "Dokumentasi + rekap hasil"
+      "Rekap hasil pemeriksaan + dokumentasi"
     ],
     "pic": "TBD",
-    "tanggal": "",
+    "tanggal": "2026-01-19",
     "output": [],
     "kataKunci": ["jentik nyamuk", "preventif", "kesehatan lingkungan", "rumah tangga"],
-    "sdgUtama": "SDG 17, SDG 12",
-    "sdgPendukung": ["SDG 8", "SDG 11", "SDG 12"],
-    "jenisDampak": "Langsung"
+    "sdgUtama": "SDG 3",
+    "sdgPendukung": ["SDG 11"]
   },
   {
     "id": "151-11",
     "nama": "Kemitraan Berkelanjutan Masyarakat: Gebyar Ramadhan Desa",
-    "kategori": "komunitas & kolaborasi",
+    "kategori": "Sosial",
     "status": "planned",
     "progress": 0,
     "updatedAt": "2026-01-18",
-    "ringkas": "Kegiatan berbasis kemitraan dan partisipasi warga untuk penguatan kohesi sosial dan kolaborasi komunitas melalui rangkaian acara Ramadhan.",
+    "ringkas": "Kegiatan komunitas untuk memperkuat kohesi sosial, partisipasi warga, dan kolaborasi lintas pihak melalui rangkaian acara Ramadhan desa.",
     "kpi": [
       "Jumlah peserta",
       "Jumlah rangkaian kegiatan",
       "Dokumentasi kegiatan"
     ],
     "pic": "TBD",
-    "tanggal": "",
+    "tanggal": "2026-01-20",
     "output": [],
-    "kataKunci": ["ramadhan", "kebersamaan", "partisipasi warga", "kolaborasi"],
-    "sdgUtama": "SDG 17, SDG 11",
-    "sdgPendukung": ["SDG 3", "SDG 11", "SDG 16"],
-    "jenisDampak": "Langsung"
+    "kataKunci": ["gebyar ramadhan", "komunitas", "kolaborasi", "partisipasi warga"],
+    "sdgUtama": "SDG 11",
+    "sdgPendukung": ["SDG 16", "SDG 17"]
   },
   {
     "id": "151-12",
     "nama": "Kolaborasi Perguruan Tinggi–Desa: Sosialisasi AutoCAD & RAB",
-    "kategori": "pendidikan vokasi; infrastruktur",
+    "kategori": "Pendidikan",
     "status": "planned",
     "progress": 0,
     "updatedAt": "2026-01-18",
-    "ringkas": "Pelatihan dasar AutoCAD dan penyusunan RAB sederhana untuk meningkatkan kapasitas perencanaan pembangunan desa, dilengkapi modul dan contoh output.",
+    "ringkas": "Pelatihan dasar AutoCAD dan penyusunan RAB sederhana untuk mendukung perencanaan pembangunan desa. Output berupa file latihan CAD dan contoh RAB.",
     "kpi": [
       "Jumlah peserta",
       "Modul CAD/RAB tersedia",
-      "Contoh output RAB",
-      "File latihan AutoCAD"
+      "File latihan AutoCAD",
+      "Contoh output RAB sederhana"
     ],
     "pic": "TBD",
-    "tanggal": "",
+    "tanggal": "2026-01-21",
     "output": [],
     "kataKunci": ["autocad", "rab", "skill cad", "rencana anggaran biaya"],
-    "sdgUtama": "SDG 17, SDG 4",
-    "sdgPendukung": ["SDG 4", "SDG 9"],
-    "jenisDampak": "Langsung"
+    "sdgUtama": "SDG 4",
+    "sdgPendukung": ["SDG 9", "SDG 11"]
   },
   {
     "id": "151-13",
     "nama": "Kolaborasi Pendidikan Lingkungan: Workshop Ecoprint Ramah Lingkungan bagi Anak Sekolah Dasar",
-    "kategori": "ketrampilan motorik halus, kebersamaan, kepedulian terhadap lingkungan",
+    "kategori": "Lingkungan",
     "status": "planned",
     "progress": 0,
     "updatedAt": "2026-01-18",
-    "ringkas": "Workshop ecoprint untuk anak SD yang menumbuhkan kreativitas sekaligus literasi lingkungan melalui pemanfaatan tumbuhan sekitar secara berkelanjutan.",
+    "ringkas": "Workshop ecoprint untuk anak sekolah dasar guna menumbuhkan kreativitas dan kepedulian lingkungan melalui pemanfaatan tumbuhan lokal secara berkelanjutan.",
     "kpi": [
       "Jumlah peserta",
-      "Materi edukasi tersedia",
-      "Koordinasi dengan pihak SD",
+      "Koordinasi dengan pihak sekolah",
+      "Produk ecoprint dihasilkan",
       "Dokumentasi kegiatan"
     ],
     "pic": "TBD",
-    "tanggal": "",
+    "tanggal": "2026-01-22",
     "output": [],
     "kataKunci": ["ecoprint", "anak sekolah", "literasi lingkungan", "kreativitas"],
-    "sdgUtama": "SDG 17, SDG 12",
-    "sdgPendukung": ["SDG 13", "SDG 15"],
-    "jenisDampak": "Langsung"
+    "sdgUtama": "SDG 12",
+    "sdgPendukung": ["SDG 13", "SDG 15"]
   },
   {
     "id": "151-14",
     "nama": "Program Promotif–Preventif Kesehatan Lansia: Sosialisasi Diet Gizi Seimbang untuk Hipertensi dan Diabetes",
-    "kategori": "kesehatan masyarakat berusia lanjut",
+    "kategori": "Kesehatan",
     "status": "planned",
     "progress": 0,
     "updatedAt": "2026-01-18",
-    "ringkas": "Penyuluhan gizi seimbang untuk lansia/kelompok risiko terkait hipertensi dan diabetes, mencakup faktor risiko dan langkah pencegahan berbasis pola hidup sehat.",
+    "ringkas": "Penyuluhan pola makan dan gizi seimbang untuk pencegahan serta pengendalian hipertensi dan diabetes pada kelompok lansia/kelompok risiko.",
     "kpi": [
       "Jumlah peserta",
-      "Materi edukasi tersedia",
-      "Koordinasi posyandu/PKK"
+      "Leaflet/materi edukasi tersedia",
+      "Koordinasi posyandu/PKK",
+      "Dokumentasi kegiatan"
     ],
     "pic": "TBD",
-    "tanggal": "",
+    "tanggal": "2026-01-23",
     "output": [],
     "kataKunci": ["lansia", "hipertensi", "diabetes", "gizi seimbang", "preventif"],
-    "sdgUtama": "SDG 17, SDG 3",
-    "sdgPendukung": ["SDG 3", "SDG 5"],
-    "jenisDampak": "Langsung"
+    "sdgUtama": "SDG 3",
+    "sdgPendukung": ["SDG 5"]
   },
   {
     "id": "151-15",
     "nama": "Penataan Taman PKK sebagai Ruang Hijau Berkelanjutan untuk Lingkungan Desa",
-    "kategori": "Penghijauan lingkungan, partisipasi anggota PKK, pemanfaatan lahan secara berkelanjutan",
+    "kategori": "Lingkungan",
     "status": "planned",
     "progress": 0,
     "updatedAt": "2026-01-18",
-    "ringkas": "Revitalisasi taman PKK melalui penanaman apotek hidup dan penataan ruang hijau agar dapat dimanfaatkan dan dirawat berkelanjutan oleh anggota PKK.",
+    "ringkas": "Revitalisasi taman PKK melalui penataan ruang hijau dan penanaman apotek hidup agar taman kembali produktif, tertata, dan dirawat berkelanjutan oleh anggota PKK.",
     "kpi": [
-      "Jumlah bibit ditanam",
-      "Pemanfaatan lahan",
-      "Koordinasi PKK"
+      "Jumlah bibit/tanaman ditanam",
+      "Pemanfaatan lahan taman",
+      "Koordinasi PKK",
+      "Dokumentasi before-after"
     ],
     "pic": "TBD",
-    "tanggal": "",
+    "tanggal": "2026-01-24",
     "output": [],
     "kataKunci": ["taman pkk", "apotek hidup", "ruang hijau", "penghijauan", "partisipasi"],
-    "sdgUtama": "SDG 11, SDG 15",
-    "sdgPendukung": ["SDG 3", "SDG 13"],
-    "jenisDampak": "Langsung"
+    "sdgUtama": "SDG 15",
+    "sdgPendukung": ["SDG 11", "SDG 13"]
   }
 ]
-  
