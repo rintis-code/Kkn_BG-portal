@@ -231,8 +231,17 @@ async function initTim() {
 // ===============================
 // PROKER (proker.html)
 // ===============================
-async function initProker() {
-  const res = await fetch("data/proker.json", { cache: "no-store" });
+async function initProker() 
+  // Baca status dari URL (?status=planned dll)
+{
+const urlParams = new URLSearchParams(window.location.search);
+const presetStatus = urlParams.get("status");
+if (presetStatus) {
+  const filterStatus = document.getElementById("filterStatus");
+  if (filterStatus) filterStatus.value = presetStatus;
+}
+{
+    const res = await fetch("data/proker.json", { cache: "no-store" });
   if (!res.ok) throw new Error("Fetch proker.json gagal: " + res.status);
   const data = await res.json();
 
@@ -243,7 +252,7 @@ async function initProker() {
     fKat.innerHTML =
       `<option value="">Semua kategori</option>` +
       categories.map(c => `<option value="${safeText(c)}">${safeText(c)}</option>`).join("");
-  }
+}
 
   // Tabs kategori (kekinian)
   const tabsWrap = $("#kategoriTabs");
