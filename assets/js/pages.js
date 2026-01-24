@@ -152,7 +152,6 @@ async function initHome() {
 
   const staticH = (site.heroHighlights || []).map(h => {
   let link = "#";
-
   const label = (h.label || "").toLowerCase();
 
   if (label.includes("program")) link = "proker.html";
@@ -161,7 +160,7 @@ async function initHome() {
 
   return `
     <a href="${link}"
-       class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md transition block">
+       class="block rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md hover:-translate-y-1 transition">
       <div class="text-2xl font-bold text-slate-900">${safeText(h.value)}</div>
       <div class="mt-1 text-sm text-slate-600">${safeText(h.label)}</div>
     </a>
