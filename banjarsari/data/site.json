@@ -9,5 +9,6 @@
     { "label": "Program Kerja", "value": "20+" },
     { "label": "Dokumentasi", "value": "Foto/Video" },
     { "label": "Output", "value": "Dokumen" }
-  ]
+  "ctaFormLaporan": "https://forms.gle/ISI_LINK_FORM_BANJARSARI",
+  "ctaDrive": "https://drive.google.com/drive/folders/1lCvteFmNgP8Fo7pjCxhgUCA-1zmU01Pm?usp=sharing"
 }
