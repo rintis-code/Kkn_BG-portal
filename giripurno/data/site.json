@@ -1,5 +1,5 @@
 {
-  "siteName": "KKN GIRIPURNO",
+  "siteName": "KKN Giripurno",
   "tagline": "Portal program: progres jelas, output terdokumentasi.",
   "desa": "Desa/Kelurahan Giripurno",
   "periode": "Januari–Februari 2026",
@@ -8,7 +8,7 @@
   "ctaDrive": "https://drive.google.com/drive/folders/1KA3_V_hOi7X-CNuBYPiSoxHpKkHJpQvN?usp=sharing",
 
   "heroHighlights": [
-    { "label": "Program Kerja", "value": "20+" },
+    { "label": "Program Kerja", "value": "18+" },
     { "label": "Dokumentasi", "value": "Foto/Video" },
     { "label": "Output", "value": "Dokumen" }
   ]
