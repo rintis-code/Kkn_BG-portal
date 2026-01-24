@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800">
+<body data-page="home" class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800">
   <!-- NAV -->
   <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/70 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
@@ -24,99 +24,155 @@
         <a data-nav="profil" href="profil.html" class="hover:text-slate-900">Profil</a>
         <a data-nav="tim" href="tim.html" class="hover:text-slate-900">Tim</a>
         <a data-nav="proker" href="proker.html" class="hover:text-slate-900">Proker</a>
-        <a data-nav="dok" href="dokumentasi.html" class="hover:text-slate-900">Dokumentasi</a>
+        <a data-nav="dokumentasi" href="dokumentasi.html" class="hover:text-slate-900">Dokumentasi</a>
         <a data-nav="output" href="output.html" class="hover:text-slate-900">Output</a>
       </nav>
 
       <div class="flex items-center gap-2">
         <a href="../index.html"
            class="hidden rounded-2xl bg-white px-4 py-2 text-sm font-bold text-slate-900 ring-1 ring-slate-200 hover:shadow sm:inline-block">
-           Portal BG
+          Portal BG
         </a>
+
+        <!-- tombol Drive (Folder Dokumen) -->
+        <a id="btnDrive" href="#" target="_blank" rel="noopener"
+           class="rounded-2xl bg-white px-4 py-2 text-sm font-bold text-slate-900 ring-1 ring-slate-200 hover:shadow">
+          Folder Dokumen
+        </a>
+
+        <!-- tombol Laporan -->
         <a id="btnLaporan" href="#" target="_blank" rel="noopener"
            class="rounded-2xl bg-slate-900 px-4 py-2 text-sm font-bold text-white shadow-sm hover:opacity-90">
-           Laporan
+          Laporkan Progres
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main class="mx-auto max-w-6xl px-4">
-    <section class="py-10">
-      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <!-- Left -->
-        <div>
-          <div class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-xs font-bold text-white">
-            <span class="h-2 w-2 rounded-full bg-white"></span>
-            Portal Desa
-          </div>
-
-          <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            Dashboard KKN UNS 2026 - Giripurno
-          </h1>
-
-          <p id="tagline" class="mt-4 text-base leading-relaxed text-slate-600">
-            —
-          </p>
-
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a id="btnDrive" href="#" target="_blank" rel="noopener"
-               class="rounded-2xl bg-white px-5 py-3 text-sm font-bold text-slate-900 ring-1 ring-slate-200 hover:shadow">
-               Folder Dokumen
-            </a>
-
-<a id="btnForm" href="#" target="_blank" rel="noopener"
-   class="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-bold text-white shadow-sm hover:opacity-90">
-   Laporkan Progres
-</a>
-<a href="../panduan-input.html"
-   class="inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 text-sm font-extrabold text-white ring-1 ring-white/15 hover:bg-white/15">
-  Panduan Input
-</a>
-
-            <a href="proker.html"
-               class="rounded-2xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-900 ring-1 ring-slate-200 hover:bg-white">
-               Lihat Proker
-            </a>
-          </div>
-
-          <div class="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3" id="highlights"></div>
-
-          <div class="mt-7 rounded-3xl bg-slate-900 p-6 text-white">
-            <div class="text-xs font-semibold text-white/70">Lokasi & Periode</div>
-            <div class="mt-2 text-lg font-bold" id="desa">—</div>
-            <div class="mt-1 text-sm text-white/80" id="periode">—</div>
-          </div>
+  <!-- CONTENT -->
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <!-- HERO -->
+    <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <!-- kiri -->
+      <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+        <div class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-xs font-extrabold text-white">
+          <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
+          Portal Desa
         </div>
 
-        <!-- Right -->
-        <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-slate-700 p-1">
-          <div class="rounded-[22px] bg-white p-6">
+        <h1 class="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          Dashboard KKN UNS 2026 - <span id="desaName">-</span>
+        </h1>
+
+        <p id="tagline" class="mt-4 max-w-xl text-slate-600">
+          -
+        </p>
+
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a id="btnDrive2" href="#" target="_blank" rel="noopener"
+             class="rounded-2xl bg-white px-5 py-3 text-sm font-bold text-slate-900 ring-1 ring-slate-200 hover:shadow">
+            Folder Dokumen
+          </a>
+
+          <a id="btnLaporan2" href="#" target="_blank" rel="noopener"
+             class="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-bold text-white shadow-sm hover:opacity-90">
+            Laporkan Progres
+          </a>
+
+          <a href="proker.html"
+             class="rounded-2xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-900 ring-1 ring-slate-200 hover:bg-white">
+            Lihat Proker
+          </a>
+        </div>
+
+        <div class="mt-10 rounded-3xl bg-slate-900 p-6 text-white">
+          <div class="text-xs font-semibold text-white/70">Lokasi & Periode</div>
+          <div class="mt-4 space-y-2 text-sm">
             <div class="flex items-center justify-between">
-              <div>
-                <div class="text-xs font-semibold text-slate-500">Update terbaru</div>
-                <div class="mt-1 text-xl font-extrabold text-slate-900">Proker highlight</div>
-              </div>
-              <a href="proker.html" class="text-sm font-bold text-slate-700 underline underline-offset-4">Detail</a>
+              <span class="text-white/70">Desa/Kelurahan</span>
+              <span id="desaLabel" class="font-extrabold">-</span>
             </div>
-            <div class="mt-5 grid gap-4" id="prokerPreview"></div>
+            <div class="flex items-center justify-between">
+              <span class="text-white/70">Periode</span>
+              <span id="periode" class="font-extrabold">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- kanan -->
+      <div class="rounded-3xl bg-slate-900 p-7 text-white shadow-sm ring-1 ring-slate-900">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="text-xs font-semibold text-white/70">Update terbaru</div>
+            <div class="mt-2 text-2xl font-extrabold">Proker highlight</div>
+          </div>
+          <a href="proker.html" class="text-sm font-bold underline underline-offset-4 hover:opacity-90">Detail</a>
+        </div>
+
+        <div id="prokerPreview" class="mt-6 space-y-4">
+          <!-- diisi initHome(): 3 proker terbaru -->
+          <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+            <div class="text-sm font-bold">Memuat data proker...</div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="border-t border-slate-200 py-10 text-center text-sm text-slate-500">
-      © 2026 — KKN Portal (Giripurno) · Built with HTML + Tailwind
+    <!-- HIGHLIGHTS -->
+    <section class="mt-8">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" id="highlights">
+        <!-- diisi initHome(): static heroHighlights + dynamic counts -->
+      </div>
+    </section>
+
+    <footer class="mt-14 border-t border-slate-200 pt-8 text-sm text-slate-500">
+      © 2026 — KKN Portal (<span id="footerDesa">-</span>)
     </footer>
   </main>
 
-  <!-- SCRIPTS (penting: karena halaman ada di subfolder) -->
+  <!-- SCRIPTS (penting: halaman desa ada di subfolder) -->
   <script src="../assets/js/app.js"></script>
   <script src="../assets/js/pages.js"></script>
+
+  <!-- Paksa jalan (agar tidak tergantung data-page sekalipun) -->
   <script>
-    initNavbar("home");
-    initHome();
+    (async () => {
+      // navbar
+      if (typeof initNavbar === "function") await initNavbar("home");
+
+      // inject elemen yg spesifik home (ambil dari site.json giripurno)
+      const site = await loadJSON("data/site.json");
+
+      const desa = site.desa || "Giripurno";
+      const desaShort = (desa || "").replace(/^Desa\/Kelurahan\s+/i, "") || desa;
+
+      const elDesaName = document.getElementById("desaName");
+      if (elDesaName) elDesaName.textContent = desaShort;
+
+      const elDesaLabel = document.getElementById("desaLabel");
+      if (elDesaLabel) elDesaLabel.textContent = desa;
+
+      const elFooter = document.getElementById("footerDesa");
+      if (elFooter) elFooter.textContent = desaShort;
+
+      // tombol CTA (ambil dari site.json)
+      const drive = site.ctaDrive || "#";
+      const lapor = site.ctaFormLaporan || "#";
+
+      const btnDrive = document.getElementById("btnDrive");
+      const btnDrive2 = document.getElementById("btnDrive2");
+      if (btnDrive) btnDrive.href = drive;
+      if (btnDrive2) btnDrive2.href = drive;
+
+      const btnLaporan = document.getElementById("btnLaporan");
+      const btnLaporan2 = document.getElementById("btnLaporan2");
+      if (btnLaporan) btnLaporan.href = lapor;
+      if (btnLaporan2) btnLaporan2.href = lapor;
+
+      // jalankan initHome() dari pages.js (highlight + proker preview)
+      if (typeof initHome === "function") await initHome();
+    })().catch(err => console.error("home giripurno init error:", err));
   </script>
 </body>
 </html>
