@@ -168,22 +168,26 @@ async function initHome() {
 }).join("");
 
   const dynamicH = `
-  <a href="proker.html" class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md transition block">
+  <a href="proker.html"
+     class="block rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md hover:-translate-y-1 transition">
     <div class="text-2xl font-bold text-slate-900">${total}</div>
     <div class="mt-1 text-sm text-slate-600">Total Proker</div>
   </a>
 
-  <a href="proker.html" class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md transition block">
+  <a href="proker.html?status=planned"
+     class="block rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md hover:-translate-y-1 transition">
     <div class="text-2xl font-bold text-slate-900">${planned}</div>
     <div class="mt-1 text-sm text-slate-600">Planned</div>
   </a>
 
-  <a href="proker.html" class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md transition block">
+  <a href="proker.html?status=ongoing"
+     class="block rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md hover:-translate-y-1 transition">
     <div class="text-2xl font-bold text-slate-900">${ongoing}</div>
     <div class="mt-1 text-sm text-slate-600">Ongoing</div>
   </a>
 
-  <a href="proker.html" class="rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md transition block">
+  <a href="proker.html?status=done"
+     class="block rounded-2xl bg-white/70 p-4 ring-1 ring-white/30 backdrop-blur hover:shadow-md hover:-translate-y-1 transition">
     <div class="text-2xl font-bold text-slate-900">${done}</div>
     <div class="mt-1 text-sm text-slate-600">Done</div>
   </a>
